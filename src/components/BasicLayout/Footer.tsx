@@ -22,23 +22,23 @@ const Footer = () => {
       ]
     
       return (
-        <div className="bg-gray-800 px-4 py-4 flex flex-row justify-between lg:justify-around flex-wrap gap-2">
+        <div className="bg-[#FE9D1A] px-4 py-4 flex flex-row justify-between lg:justify-around flex-wrap gap-2">
           {/* company list and policy */}
             {/* company */}
             <div className='flex flex-col'>
-              <p className="text-slate-500 font-semibold text-sm">COMPANY</p>
+              <p className="text-white font-semibold text-sm">COMPANY</p>
               {company.map((item) =>
-                <p className="text-white font-semibold py-1">{item.text}</p>
+                <p className="text-black font-semibold py-1">{item.text}</p>
               )}
             </div>
     
             {/* otherpage */}
-            <div className='text-right'>
-              <p className="text-slate-500 font-semibold text-sm">PRODUCTS</p>
-              <p className="text-white font-semibold py-1">
+            <div className='text-right text-black'>
+              <p className="text-white font-semibold text-sm">PRODUCTS</p>
+              <p className="font-semibold py-1">
                 Artist Booking
               </p>
-              <p className="text-white font-semibold py-1">
+              <p className="font-semibold py-1">
                 Event Tickets
               </p>
             </div>
@@ -46,15 +46,15 @@ const Footer = () => {
             {/* socials */}
             <div className='w-full'>
     
-            <div className="flex flex-row justify-between lg:justify-around gap-2 py-1">
-            <p className="text-slate-500 font-semibold text-sm text-right">SOCIAL</p>
+            <div className="flex flex-row justify-between lg:justify-around gap-2 py-1 text-black">
+            <p className="text-white font-semibold text-sm text-right">SOCIAL</p>
             <span className='flex gap-5'>
                 <IoLogoInstagram color='white'/>         
                 <IoLogoFacebook color='white' />
             </span>
             </div>
     
-            <p className="text-white font-semibold text-xs py-2 px-4">2023 Abhishek Beegun.ALL rights reversed.</p>
+            <p className="font-semibold text-xs py-2 px-4">2023 Abhishek Beegun.ALL rights reversed.</p>
             
             
             </div>

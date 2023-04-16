@@ -1,6 +1,7 @@
 import React from 'react'
 import {Swiper, SwiperSlide}  from 'swiper/react'
 import 'swiper/css';
+import ArtistCard from '../Artists/ArtistCard';
 
 const FeaturedArtist = () => {
     const arry = ["1", "2", "3","4","5","6","7","8","9","10"]
@@ -29,9 +30,7 @@ const FeaturedArtist = () => {
     >
     {arry.map( o => (
         <SwiperSlide>
-            <div className='h-[200px] lg:h-[300px] bg-slate-500 flex justify-center rounded-lg items-center'>
-            <h1>{o}</h1>
-            </div>
+          <ArtistCard/>
         </SwiperSlide>
     ))}
     </Swiper>

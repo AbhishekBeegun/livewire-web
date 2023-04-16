@@ -27,3 +27,13 @@
   justify-content: center;
   align-items: center;
 }
+
+.darkmode{
+  color : white;
+  background-color: black; 
+}
+
+.whitemode{
+  color: #FE9D1A;
+  background-color: white;
+}
