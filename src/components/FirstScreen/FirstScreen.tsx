@@ -5,7 +5,7 @@ import {IoLogoAndroid} from 'react-icons/io'
 const FirstScreen = () => {
   return (
     <main className="flex flex-col lg:flex-row justify-evenly items-center h-screen w-screen bg-black ">
-        <div className="flex items-center justify-center h-[45%] lg:w-[45%] bg-sky-600">
+        <div className="flex items-center justify-center h-[45%] lg:w-[45%] bg-[#FE9D1A]">
           <video className="w-auto h-full object-fill" 
           autoPlay
           loop

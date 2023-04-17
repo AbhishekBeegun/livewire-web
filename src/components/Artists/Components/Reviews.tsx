@@ -7,7 +7,7 @@ const Reviews = () => {
     {/* reviews and social */}
     
      
-      <div className="flex flex-row items-center justify-between px-4 py-3 bg-white rounded-t-lg">
+      <div className="flex flex-row items-center justify-between px-4 py-2 bg-white rounded-t-lg">
         <p 
         className="font-semibold text-black">Reviews</p>
         <div className="flex flex-row gap-2 items-center">

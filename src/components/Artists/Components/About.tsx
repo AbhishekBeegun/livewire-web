@@ -22,7 +22,7 @@ const About = () => {
   return (
     <div className="bg-black lg:px-96">
         {/* like heart or book artist */}
-        <div className="flex flex-row justify-center py-4 gap-8 lg:gap-48">
+        <div className="flex flex-row justify-center py-2  gap-8 lg:gap-48">
          
           <button 
           className="px-3 py-2 rounded-lg hover:scale-110 transition-all"
@@ -33,7 +33,7 @@ const About = () => {
           </button>
 
           <button 
-          className="bg-white px-20 py-2 rounded-full hover:scale-110 transition-all"
+          className="bg-white px-20 rounded-full hover:scale-110 transition-all"
           onClick={() => handleBooking()}>
           
               <p className="text-black font-semibold">Book</p>              
@@ -60,12 +60,12 @@ const About = () => {
                 {ShowMore ? 
                 <div className="flex flex-row items-center justify-center py-2 gap-2 hover:scale-110 transition-all ">
                 <p
-                className="font-semibold text-white">Show more</p>
+                className="font-semibold text-white text-xs lg:text-base">Show more</p>
                 <IoIosArrowDown size={12} color="white" />
                 </div>:
                 <div className="flex flex-row items-center justify-center gap-2 hover:scale-110 transition-all">
                 <p
-                className="font-semibold text-white py-2">Show less</p>
+                className="font-semibold text-white py-2 text-xs lg:text-base">Show less</p>
                 <IoIosArrowUp size={12} color="white" />
                 </div>}
 
