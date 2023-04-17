@@ -9,7 +9,7 @@ const EventHeader = () => {
     src='https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/p8UlsflkQnKuSvPzMq0w' />
   
 
-      <div className="absolute bg-gradient-to-t from-black bottom-0 left-0 flex flex-row h-[100px] lg:h-[250px] w-full items-center justify-center ">
+      <div className="absolute bg-gradient-to-t from-black bottom-0 left-0 flex flex-row h-[120px] lg:h-[200px] w-full items-center justify-center ">
         
               
         {/* event name & Rating location */}
@@ -41,7 +41,7 @@ const EventHeader = () => {
 
         <>
         <p  
-            className="text-xs lg:text-lg text-white">loaction</p>
+            className="text-xs lg:text-lg text-white">ldate</p>
         </>
         </div>
 
