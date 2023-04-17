@@ -18,8 +18,7 @@ const UpcomeEvents = () => {
   
       spaceBetween={10}
       slidesPerView={1.2}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
+
       breakpoints={{
         // when window width is >= 768px
         768: {

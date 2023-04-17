@@ -2,9 +2,10 @@ import React from 'react'
 import {Swiper, SwiperSlide}  from 'swiper/react'
 import 'swiper/css';
 import ArtistCard from '../Artists/ArtistCard';
-const LocalTalent = () => {
 
-    const arry = ["1", "2", "3","4","5","6","7","8","9","10"]
+
+const LocalTalent = ({LA} :any) => {
+
   return (
     <div className='flex flex-col justify-center px-2 py-2 lg:py-8 lg:px-64 bg-black text-white'>
          
@@ -17,8 +18,6 @@ const LocalTalent = () => {
   
       spaceBetween={10}
       slidesPerView={2.2}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
       breakpoints={{
         // when window width is >= 768px
         768: {
@@ -27,11 +26,15 @@ const LocalTalent = () => {
         },
       }}    
     >
-    {arry.map( o => (
-        <SwiperSlide>
-          <ArtistCard/>
-        </SwiperSlide>
-    ))}
+
+{LA && LA.length > 0 && LA.map( (artist: any) => {
+  return(
+    <SwiperSlide>
+     <ArtistCard artist={artist}/>
+    </SwiperSlide>
+  )}
+)}
+
     </Swiper>
 
       
@@ -40,3 +43,5 @@ const LocalTalent = () => {
 }
 
 export default LocalTalent
+
+

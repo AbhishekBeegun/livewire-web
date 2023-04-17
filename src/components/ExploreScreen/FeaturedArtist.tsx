@@ -3,8 +3,7 @@ import {Swiper, SwiperSlide}  from 'swiper/react'
 import 'swiper/css';
 import ArtistCard from '../Artists/ArtistCard';
 
-const FeaturedArtist = () => {
-    const arry = ["1", "2", "3","4","5","6","7","8","9","10"]
+const FeaturedArtist = ({FA} :any) => {
 
   return (
     <div className='flex flex-col justify-center px-2 py-2 lg:py-8 lg:px-64 bg-black text-white'>
@@ -18,8 +17,7 @@ const FeaturedArtist = () => {
   
       spaceBetween={10}
       slidesPerView={2.2}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
+
       breakpoints={{
         // when window width is >= 768px
         768: {
@@ -28,11 +26,13 @@ const FeaturedArtist = () => {
         },
       }}
     >
-    {arry.map( o => (
-        <SwiperSlide>
-          <ArtistCard/>
-        </SwiperSlide>
-    ))}
+{FA && FA.length > 0 && FA.map( (artist: any) => {
+  return(
+    <SwiperSlide>
+     <ArtistCard artist={artist}/>
+    </SwiperSlide>
+  )}
+)}
     </Swiper>
 
       

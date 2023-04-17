@@ -11,9 +11,9 @@ const EventDetails = () => {
     <>
     <EventHeader/>
     <EventAbout/>
+    <EventArtists/>
     <EventLocation/>
     <EventTickets/>
-    <EventArtists/>
     <EventMusicVideo/>
     </>
   )

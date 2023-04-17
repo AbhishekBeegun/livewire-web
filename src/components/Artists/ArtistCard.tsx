@@ -2,7 +2,9 @@ import React from 'react'
 import { useRouter } from 'next/router';
 import {AiFillStar,AiFillHeart} from "react-icons/ai"
 
-const ArtistCard = () => {
+const ArtistCard = ({artist} :any ) => {
+
+  console.log(artist)
 
   const router = useRouter()
 
@@ -15,16 +17,17 @@ const ArtistCard = () => {
   };
 
   return (
-    <div className="h-[220px] lg:h-[350px] bg-slate-400 rounded-lg  ">
+    <div className="h-[220px] lg:h-[350px] rounded-lg relative  ">
 
+      <img src={artist?.mainPhoto.url} className='object-cover absolute w-full h-full -z-10 opacity-80 rounded-lg' />       
       <div typeof='button' className="flex flex-col justify-between h-full cursor-pointer" 
       onClick={() => handleCardPress()}>
-       
+
 
           <div className="flex flex-row justify-between items-center p-2 w-full">
             {/* rating */}
             <div className="flex flex-row items-center justify-center gap-1">
-            <p className="text-sm text-white">5</p>
+            <p className="text-sm text-white">{artist?.rating}</p>
             <AiFillStar size={20} color='gold' />
             </div>
 
@@ -37,7 +40,7 @@ const ArtistCard = () => {
 
           </div>
            {/* ArtistName */}
-          <p className="text-white font-semibold text-xl px-2 py-2">WaKa flow</p>
+          <p className="text-white font-semibold text-xl px-2 py-2">{artist?.name}</p>
            
    
 

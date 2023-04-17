@@ -1,74 +1,125 @@
 import React, { useState } from 'react'
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 
 
-const BuyTicketsModal = () => {
-  const [showModal, setShowModal] = useState(false)
+const BuyTicketsModal = ({setShowModal} : any) => {
+
+  const [prices] = useState<any>(["900","1800","3000"])
+
+  const qty : any = [1 , 2 , 3 , 4 , 5 ]
+
+  const [selectPrice, setselectPrice] = useState()
+  const [selectQTY, setselectQTY] = useState()
+  const [IsPriceSelected, setIsPriceSelected] = useState(false)
+  const [IsQtySelected, setIsQtySelected] = useState(false)
+
+
   
+
+  function selectedPrice(price : any){
+    console.log(price)
+    setselectPrice(price)
+    setIsPriceSelected(true)
+    
+
+  }
+  function selectedQTY(qty: any){
+    console.log(qty)
+    setselectQTY(qty)
+    setIsQtySelected(true)
+    
+  }
+
+  const total = selectPrice! * selectQTY!
+
   return (
-    <>
-    <button
-      className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-      type="button"
-      onClick={() => setShowModal(true)}
-    >
-      Open regular modal
-    </button>
-    {showModal ? (
+
       <>
         <div
-          className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+          className="justify-center items-center flex fixed inset-0 z-50 outline-none focus:outline-none"
         >
           <div className="relative w-auto my-6 mx-auto max-w-3xl">
             {/*content*/}
-            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-              {/*header*/}
-              <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                <h3 className="text-3xl font-semibold">
-                  Modal Title
-                </h3>
-                <button
-                  className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                  onClick={() => setShowModal(false)}
-                >
-                  <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
-                    ×
-                  </span>
-                </button>
-              </div>
-              {/*body*/}
-              <div className="relative p-6 flex-auto">
-                <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                  I always felt like I could do anything. That’s the main
-                  thing people are controlled by! Thoughts- their perception
-                  of themselves! They're slowed down by their perception of
-                  themselves. If you're taught you can’t do anything, you
-                  won’t do anything. I was taught I could do everything.
-                </p>
-              </div>
-              {/*footer*/}
-              <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
-                <button
-                  className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                  type="button"
-                  onClick={() => setShowModal(false)}
-                >
-                  Close
-                </button>
-                <button
-                  className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                  type="button"
-                  onClick={() => setShowModal(false)}
-                >
-                  Save Changes
-                </button>
-              </div>
+            <div className="border lg:px-20 rounded-lg shadow-lg relative flex flex-col w-full bg-black outline-none focus:outline-none">
+              
+
+            <div className="flex flex-row justify-between items-center px-4 py-4   ">
+            <button className='hover:scale-110 transition-all'
+             onClick={() => setShowModal(false)}>
+            <AiOutlineArrowLeft size={20} color="white" />
+            </button>
+
+            <p 
+            className="text-white font-semibold py-4 px-2">Choose your tickets</p>
+            </div>
+
+            
+            {/* prices of tickets */}
+
+            <div className="flex flex-col gap-3">   
+
+            <div className="flex flex-row flex-wrap gap-2 justify-evenly px-4">
+            {prices.map( (item: any) => (
+            
+            <button onClick={() => selectedPrice(item)} 
+            className="bg-white py-2 px-4 rounded-full items-center active:bg-yellow-200 hover:scale-110 transition-all">
+            <p className="text-black font-semibold">Rs {item}</p>
+            </button>
+            ) )}
+            </div>
+            <p  
+            className="text-white text-xs font-semibold py-4 px-4">Selected Ticket : Rs {selectPrice} </p>
+
+            </div>
+
+              
+            {/* QTY of tickets */}
+
+            <div className="flex flex-col gap-3">
+
+            <div className="flex flex-row justify-evenly gap-2 py-2">            
+            {qty.map( (item : any) => (
+            <button onClick={() => selectedQTY(item)}
+            key={item} 
+            className="border border-white py-2 px-4 rounded-lg items-center active:bg-white hover:scale-110 transition-all">
+            <p 
+            className="text-white">{item}</p>
+            </button>
+            ) )}
+            </div>
+
+            <p 
+            className="text-white text-xs font-semibold py-4 px-4">Quantity : {selectQTY} </p>
+
+
+            </div>
+
+            {/* total and checkouit */}
+
+            {IsPriceSelected && IsQtySelected ?
+            <div className="flex flex-row justify-between px-4 py-8 items-center">
+            <p 
+            className="text-white text-xs font-semibold">TOTAL : Rs {total}</p>
+            <button className='bg-[#FE9D1A] rounded-full p-1 hover:scale-110 transition-all' 
+            onClick={() => {}}>
+            <AiOutlineArrowRight size={25} color="black" />
+            </button>
+            </div>
+            : <p 
+            className="text-white text-xs font-semibold uppercase m-auto py-8">Select Both options above to continue</p>         
+            }
+          </div>
+
+      
+
+             
+
             </div>
           </div>
-        </div>
-        <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+        
+        <div className="opacity-60 fixed inset-0 z-40 bg-black"></div>
       </>
-    ) : null}
-  </>
+
   )
 }
 

@@ -2,11 +2,14 @@ import React from 'react'
 import { useState } from 'react'
 import {AiFillHeart} from "react-icons/ai"
 import {IoIosArrowUp,IoIosArrowDown} from "react-icons/io"
+import BuyTicketsModal from './BuyTicketsModal'
 
 
 const EventAbout = () => {
 
   const [ShowMore, setShowMore] = useState<Boolean>(false)
+
+  const [ShowModal, setShowModal] = useState(false)
 
   function handleWish(){
     alert("Wishlist not setup")
@@ -14,6 +17,10 @@ const EventAbout = () => {
 
   function handleShowMore(){
     setShowMore(!ShowMore)
+  }
+
+  function handleModal(){
+    setShowModal(!ShowModal)
   }
   return (
     <div className="bg-black lg:px-96">
@@ -29,13 +36,17 @@ const EventAbout = () => {
           </button>
 
           <button 
-          className="bg-white px-16 rounded-full hover:scale-110 transition-all"
-          onClick={() => {}}>
-          
-              <p className="text-black font-semibold">Buy Tickets</p>              
-     
+          className="bg-white px-16 text-black font-semibold rounded-full hover:scale-110 transition-all"
+          onClick={() => handleModal()}>
+            Buy Tickets        
           </button>
         </div>
+
+        {
+          ShowModal ? 
+          <BuyTicketsModal setShowModal={setShowModal}/>
+          : <></>
+        }
 
         {/* about section */}
         <div className="px-4">
