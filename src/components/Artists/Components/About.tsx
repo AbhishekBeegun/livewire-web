@@ -1,19 +1,16 @@
+import Link from 'next/link'
 import React from 'react'
 import { useState } from 'react'
 import {AiFillHeart} from "react-icons/ai"
 import {IoIosArrowUp,IoIosArrowDown} from "react-icons/io"
 
 
-const About = () => {
+const About = ({desc,name} : any) => {
 
-  const [ShowMore, setShowMore] = useState<Boolean>(false)
+  const [ShowMore, setShowMore] = useState<Boolean>(true)
 
   function handleWish(){
     alert("Wishlist not setup")
-  }
-
-  function handleBooking(){
-    console.log("booking for artist name")
   }
 
   function handleShowMore(){
@@ -32,26 +29,29 @@ const About = () => {
    
           </button>
 
-          <button 
-          className="bg-white px-20 rounded-full hover:scale-110 transition-all"
-          onClick={() => handleBooking()}>
+          <Link 
+          href={`mailto:abhishekbeegun0642@gmail.com?subject=Quotation for Booking ${name}&body=Need Quote for ${name}`}
+          className="bg-white flex justify-center items-center px-20 rounded-full hover:scale-110 transition-all"
+          >
           
               <p className="text-black font-semibold">Book</p>              
      
-          </button>
+          </Link>
         </div>
 
         {/* about section */}
         <div className="px-4">
           <p  
           className="text-lg font-semibold text-white py-2">About</p>
+          
+          
           {ShowMore ? 
-          <div className="w-full h-[10vh] overflow-hidden">
-            <p className="text-gray-500 text-xs">artistDescription</p>
+          <div className="w-full h-[8vh] overflow-hidden">
+            <p className="text-gray-500 text-xs">{desc}</p>
           </div> :
            <div className="w-full h-auto overflow-hidden">
              <p 
-             className="text-gray-500 text-xs">artistDescriptionfull</p>
+             className="text-gray-500 text-xs">{desc}</p>
            </div>}
 
 

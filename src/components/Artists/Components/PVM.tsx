@@ -3,12 +3,12 @@ import Picture from './Picture'
 import Video from './Video'
 import Music from './Music'
 
-const PVM = () => {
+const PVM = ({photos,video,deezer} : any) => {
   return (
     <>
-    <Picture/>
-    <Video/>
-    <Music/>
+    <Picture grid={photos}/>
+    <Video video={video}/>
+    <Music deezerID={deezer}/>
     </>
   )
 }

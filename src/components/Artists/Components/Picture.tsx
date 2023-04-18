@@ -4,15 +4,11 @@ import { useCallback } from 'react';
 import ImageViewer from 'react-simple-image-viewer';
 
 
-const Picture = () => {
+const Picture = ({grid} : any) => {
+
+
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
-  const images = [
-    'https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/TU5J9KLvSamlIts0SRAP',
-    'https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/Ij1KM1TRmPav4luO7mgR',
-    'https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/1zYhBBVQwmFXUVcI9fao',
-    'https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/1zYhBBVQwmFXUVcI9fao',
-  ];
 
   const openImageViewer = useCallback((index: React.SetStateAction<number>) => {
     setCurrentImage(index);
@@ -36,22 +32,22 @@ const Picture = () => {
     </div>
 
     <div className='flex flex-row flex-wrap w-full'>
-      {images.map((src, index) => (
+      {grid && grid?.map( (o: any,index:any) => (
         <div className='w-1/2'>
 
-        <img className='h-[200px] lg:h-[350px] object-cover bg-white'
-          src={ src }
+        <img className='h-[200px] lg:h-[350px] w-full object-cover bg-white'
+          src={ o.url }
           onClick={ () => openImageViewer(index) }
           key={ index }
           alt="img"
           />
           </div>
-      ))}
 
+      ))}
       {isViewerOpen && (
         <div className='z-50'>
         <ImageViewer
-          src={ images }
+          src={ grid }
           currentIndex={ currentImage }
           disableScroll={ false }
           closeOnClickOutside={ true }

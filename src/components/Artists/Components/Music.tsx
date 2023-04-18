@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-const Music = () => {
+const Music = ({deezerID} :any) => {
   return (
     <div className="py-4 px-2 bg-black lg:px-96 ">
        

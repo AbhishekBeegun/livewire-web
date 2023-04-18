@@ -1,39 +1,51 @@
+import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
 import React from 'react'
 import ArtistDetails from '~/components/Artists/ArtistDetails'
 import {getApolloClient} from '~/lib/apollo-client'
 import { ARTIST_DETAILS } from '~/lib/Queries'
 
 
-const Slug = () => {
+const Slug = ({ARD} : any ) => {
+
+  console.log(ARD)
+
   return (
     <>
-        <ArtistDetails/>
+        <ArtistDetails ARD={ARD}/>
     </>
   )
 }
 
 export default Slug
 
-//need to make params for slug -----
 
-
-// export async function getStaticProps() {
-
-//   const apolloClient = getApolloClient();
-
-//   const data = await apolloClient.query({
-//     query: LOCALARTIST_QUERY
-//   });
-
-//   const ARD = data?.data.artist.map((artist: any) =>{
-//     return{
-//       ...artist
-//     }
-//   });
-
-//   return { 
-//     props: {
-//       ARD
-//     }
-//   }
-// }
+export async function getStaticProps({ params = {} } = {}) {
+ 
+  const {slug} = params as Params;
+ 
+   const apolloClient = getApolloClient();
+ 
+   const data = await apolloClient.query({
+     query: ARTIST_DETAILS
+     ,
+    variables: {
+      slug: slug,
+    }
+      
+   });
+ 
+ 
+  const ARD = data?.data.artist
+     return { 
+       props: {
+        ARD
+       }
+     }
+ }
+ 
+ export async function getStaticPaths() {
+   return {
+     paths: [],
+     fallback: 'blocking'
+   }
+ }

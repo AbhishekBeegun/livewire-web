@@ -54,7 +54,8 @@ export async function getStaticProps() {
 
   const LA = data?.data.artists.map((artist: any) =>{
     return{
-      ...artist
+      ...artist,
+        path: `/artist-details/${artist.slug}`
     }
   });
 

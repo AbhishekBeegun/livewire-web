@@ -1,7 +1,24 @@
-import React from 'react'
+import Link from 'next/link'
+import React,{useState,useEffect} from 'react'
 import {IoLogoInstagram,IoLogoFacebook,IoLogoWhatsapp,IoMdMail,IoIosStar} from "react-icons/io"
 
-const Reviews = () => {
+const Reviews = ({rating,insta} : any) => {
+
+  const ratin = rating
+
+  const [Stars] = useState<any>([])
+
+
+    for(let i = 0 ; i < rating ; i++){
+      Stars.push(
+      <IoIosStar key={i} size={15} color="gold"/>)
+    }
+
+
+  function handleSocial(){
+    <Link href={`${insta}`} />
+  }
+
   return (
     <div className="px-2 py-2 bg-black lg:px-96">
     {/* reviews and social */}
@@ -11,40 +28,40 @@ const Reviews = () => {
         <p 
         className="font-semibold text-black">Reviews</p>
         <div className="flex flex-row gap-2 items-center">
-        <IoIosStar color='gold'/>
-        <IoIosStar color='gold'/>
-        <IoIosStar color='gold'/>
-        <IoIosStar color='gold'/>
-        <IoIosStar color='gold'/>
+         {/* {Stars} */}
         </div>
     
       </div>
 
       <div className="flex flex-row items-center justify-evenly gap-1 py-4">
-        <button 
+        
+        <Link href={`${insta}`} rel="noopener noreferrer" target="_blank"
         className="border border-white rounded-lg py-2 px-6 hover:scale-110 transition-all"
-        onClick={() => {}}>
+        >
           <IoLogoInstagram size={24} color="white" />      
-        </button>
+        </Link>
 
-        <div onClick={() => {}}>
-        <div className="border border-white rounded-lg py-2 px-6 hover:scale-110 transition-all">
+        
+        <Link href={`${insta}`} rel="noopener noreferrer" target="_blank"
+           className="border border-white rounded-lg py-2 px-6 hover:scale-110 transition-all">
         
         <IoMdMail name="email" size={24} color="white" />   
        
-        </div>
-        </div>
+        </Link>
+        
 
-        <div className="border border-white rounded-lg py-2 px-6 hover:scale-110 transition-all">
+        <Link href={`${insta}`} rel="noopener noreferrer" target="_blank" 
+        className="border border-white rounded-lg py-2 px-6 hover:scale-110 transition-all">
           
           <IoLogoFacebook  size={24} color="white" />
      
-         </div>
-         <div className="border border-white rounded-lg py-2 px-6 hover:scale-110 transition-all">
+         </Link>
+         <Link href={`${insta}`} rel="noopener noreferrer" target="_blank"
+          className="border border-white rounded-lg py-2 px-6 hover:scale-110 transition-all">
           
           <IoLogoWhatsapp  size={24} color="white" />
      
-         </div>
+         </Link>
 
       </div>
     

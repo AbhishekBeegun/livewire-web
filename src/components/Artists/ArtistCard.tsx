@@ -13,7 +13,7 @@ const ArtistCard = ({artist} :any ) => {
   }
 
   const handleCardPress = () => {
-    router.push(`/artist-details/${1}`);  
+    router.push(`/artist-details/${artist?.slug}`);  
   };
 
   return (
