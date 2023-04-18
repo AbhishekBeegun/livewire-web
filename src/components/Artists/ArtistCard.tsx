@@ -4,8 +4,6 @@ import {AiFillStar,AiFillHeart} from "react-icons/ai"
 
 const ArtistCard = ({artist} :any ) => {
 
-  console.log(artist)
-
   const router = useRouter()
 
   function handleWish(){
@@ -17,9 +15,9 @@ const ArtistCard = ({artist} :any ) => {
   };
 
   return (
-    <div className="h-[220px] lg:h-[350px] rounded-lg relative  ">
+    <div className="h-[220px] lg:h-[350px] rounded-lg relative hover:opacity-60 transition-all">
 
-      <img src={artist?.mainPhoto.url} className='object-cover absolute w-full h-full -z-10 opacity-80 rounded-lg' />       
+      <img src={artist?.mainPhoto.url} className='object-cover absolute w-full h-full -z-10 opacity-95 lg:opacity-80 rounded-lg' alt="Img" />       
       <div typeof='button' className="flex flex-col justify-between h-full cursor-pointer" 
       onClick={() => handleCardPress()}>
 

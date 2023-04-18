@@ -7,8 +7,6 @@ import { ARTIST_DETAILS } from '~/lib/Queries'
 
 const Slug = ({ARD} : any ) => {
 
-  console.log(ARD)
-
   return (
     <>
         <ArtistDetails ARD={ARD}/>

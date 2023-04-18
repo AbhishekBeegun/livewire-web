@@ -15,7 +15,7 @@ const SearchBar = () => {
     <>
         <form className='flex items-center gap-2'>
             <input
-            className='w-full px-4 py-1 rounded-full text-xs text-white bg-black border border-[#FE9D1A]' 
+            className='w-full px-4 py-1 rounded-full text-xs text-[#FE9D1A] bg-black border border-[#FE9D1A]' 
             placeholder='Looking For . . .' 
             value={SearchInput}
             onChange={(e) => setSearchInput(e.target.value)} />

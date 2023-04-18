@@ -4,8 +4,6 @@ import {AiFillHeart} from "react-icons/ai"
 
 
 const EventCard = ({event} : any) => {
-
-  console.log(event?.poster.url)
   const router = useRouter()
 
   function handleWish(){
@@ -13,10 +11,10 @@ const EventCard = ({event} : any) => {
   }
 
   const handleCardPress = () => {
-    router.push(`/event-details/${1}`);  
+    router.push(`/event-details/${event?.slug}`);   
   };
   return (
-    <div className="h-[200px] lg:h-[300px] rounded-lg relative">
+    <div className="h-[200px] lg:h-[300px] rounded-lg relative hover:opacity-60 transition-all">
       {/* backgroundImage */}
       <img src={event?.poster.url} alt='Ëvent'
       className='object-cover absolute w-full h-full -z-10 opacity-80 rounded-lg' />       

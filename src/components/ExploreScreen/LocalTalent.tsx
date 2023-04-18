@@ -23,6 +23,7 @@ const LocalTalent = ({LA} :any) => {
         768: {
           width: 768,
           slidesPerView: 2.5,
+          
         },
       }}    
     >

@@ -6,7 +6,7 @@ import EventTickets from './Components/EventTickets'
 import EventArtists from './Components/EventArtists'
 import EventMusicVideo from './Components/EventMusicVideo'
 
-const EventDetails = () => {
+const EventDetails = ({EVD} : any) => {
   return (
     <>
     <EventHeader/>
