@@ -28,7 +28,8 @@ const Footer = () => {
             <div className='flex flex-col'>
               <p className="text-white font-semibold text-sm">COMPANY</p>
               {company.map((item) =>
-                <p className="text-black font-semibold py-1">{item.text}</p>
+                <p key={item.page} 
+                className="text-black font-semibold py-1">{item.text}</p>
               )}
             </div>
     

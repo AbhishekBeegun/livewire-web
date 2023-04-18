@@ -3,8 +3,9 @@ import { useRouter } from 'next/router';
 import {AiFillHeart} from "react-icons/ai"
 
 
-const EventCard = () => {
+const EventCard = ({event} : any) => {
 
+  console.log(event?.poster.url)
   const router = useRouter()
 
   function handleWish(){
@@ -15,8 +16,11 @@ const EventCard = () => {
     router.push(`/event-details/${1}`);  
   };
   return (
-    <div className="h-[200px] lg:h-[300px] bg-slate-500 rounded-lg">
+    <div className="h-[200px] lg:h-[300px] rounded-lg relative">
       {/* backgroundImage */}
+      <img src={event?.poster.url} alt='Ëvent'
+      className='object-cover absolute w-full h-full -z-10 opacity-80 rounded-lg' />       
+
 
 
         <div typeof='button' 
@@ -26,12 +30,12 @@ const EventCard = () => {
 
               <div className="flex flex-row justify-between w-full">
    
-                {/* {item.artist.map( (item) => ( */}
+                {event.artist.map( (item : any) => (
                 <div className="h-[30px] w-[30px]">
                   <img className="w-full h-full rounded-full object-cover"
-                   src='https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/diCWSI2ASGiXAWkYx07p'/>
+                   src={item?.mainPhoto.url}/>
                 </div>
-                {/* ))} */}
+                ))}
 
                 {/* addtofavorite */}
                <button onClick={() => handleWish()}>
@@ -40,7 +44,7 @@ const EventCard = () => {
               </div>
 
               {/* EventName */}
-              <p className="text-white font-semibold text-xl px-2 py-2">Coldplay Event</p>
+              <p className="text-white font-semibold text-xl px-2 py-2">{event?.title}</p>
         </div>
     </div>
   )

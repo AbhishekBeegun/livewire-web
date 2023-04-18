@@ -3,7 +3,7 @@ import {Swiper, SwiperSlide}  from 'swiper/react'
 import 'swiper/css';
 import EventCard from '../Events/EventCard';
 
-const UpcomeEvents = () => {
+const UpcomeEvents = ({UPE} : any) => {
     const arry = ["1", "2", "3","4","5","6","7","8","9","10"]
 
   return (
@@ -27,11 +27,15 @@ const UpcomeEvents = () => {
         },
       }}
     >
-    {arry.map( o => (
-        <SwiperSlide>
-          <EventCard />
-        </SwiperSlide>
-    ))}
+
+{UPE && UPE.length > 0 && UPE.map( (event: any) => {
+  return(
+    <SwiperSlide>
+      <EventCard event = {event}/>
+    </SwiperSlide>
+  )}
+)}
+
     </Swiper>
 
       

@@ -6,15 +6,19 @@ import UpcomeEvents from '~/components/ExploreScreen/UpcomeEvents'
 import {getApolloClient} from '~/lib/apollo-client'
 import { LOCALARTIST_QUERY } from '~/lib/Queries'
 import { ARTIST_QUERY } from '~/lib/Queries'
+import { EVENT_QUERY } from '~/lib/Queries'
 
-const explore = ({LA,FA} : any) => {
+const explore = ({LA,FA,UPE} : any) => {
  const [LocalArtist, setLocalArtist] = useState()
 
  const [FeaturedArtists, setFeaturedArtists] = useState()
 
+ const [UpcomEvents, setUpcomEvents] = useState()
+
  useEffect(() => {
    setLocalArtist(LA)
    setFeaturedArtists(FA)
+   setUpcomEvents(UPE)
 
  }, [])
  
@@ -23,7 +27,7 @@ const explore = ({LA,FA} : any) => {
     <Banner/>
     <LocalTalent LA={LocalArtist}/>
     <FeaturedArtist FA={FeaturedArtists}/>
-    <UpcomeEvents/>
+    <UpcomeEvents UPE={UpcomEvents}/>
     </>
   )
 }
@@ -42,6 +46,9 @@ export async function getStaticProps() {
   const data1 = await apolloClient.query({
     query: ARTIST_QUERY
   });
+  const data2 = await apolloClient.query({
+    query: EVENT_QUERY
+  });
 
 
 
@@ -56,10 +63,17 @@ export async function getStaticProps() {
       ...artist
     }
   });
+
+  const UPE = data2?.data.events.map((event: any) =>{
+    return{
+      ...event
+    }
+  });
     return { 
       props: {
         LA,
-        FA
+        FA,
+        UPE
       }
     }
 }
