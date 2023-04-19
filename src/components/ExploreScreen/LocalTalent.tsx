@@ -31,7 +31,9 @@ const LocalTalent = ({LA} :any) => {
 {LA && LA.length > 0 && LA.map( (artist: any) => {
   return(
     <SwiperSlide>
+      
      <ArtistCard artist={artist}/>
+  
     </SwiperSlide>
   )}
 )}

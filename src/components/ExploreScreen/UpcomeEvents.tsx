@@ -31,7 +31,9 @@ const UpcomeEvents = ({UPE} : any) => {
 {UPE && UPE.length > 0 && UPE.map( (event: any) => {
   return(
     <SwiperSlide>
+     
       <EventCard event = {event}/>
+    
     </SwiperSlide>
   )}
 )}

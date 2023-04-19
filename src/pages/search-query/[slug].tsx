@@ -5,6 +5,7 @@ import { SEARCHARTIST_QUERY } from '~/lib/Queries'
 import { getApolloClient } from '~/lib/apollo-client'
 
 const Slug = ({SR} : any) => {
+   
   return (
     <>
     <SearchResult artist={SR} />

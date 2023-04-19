@@ -15,8 +15,8 @@ query MyQuery {
 `; 
 
 export const SEARCHARTIST_QUERY = gql`
-query MyQuery($searchinput: String) {
-  artists(where: {name_contains: $searchinput}) {
+query MyQuery($slug: String) {
+  artists(where: {name_contains: $slug}) {
          slug
       name
       mainPhoto {

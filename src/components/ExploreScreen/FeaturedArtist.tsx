@@ -14,7 +14,7 @@ const FeaturedArtist = ({FA} :any) => {
         </div>
 
      <Swiper
-  
+        
       spaceBetween={10}
       slidesPerView={2.2}
 
@@ -29,7 +29,9 @@ const FeaturedArtist = ({FA} :any) => {
 {FA && FA.length > 0 && FA.map( (artist: any) => {
   return(
     <SwiperSlide>
+     
      <ArtistCard artist={artist}/>
+   
     </SwiperSlide>
   )}
 )}
