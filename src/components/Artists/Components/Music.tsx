@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import DeezerPlay from './DeezerPlay'
 
 const Music = ({deezerID} :any) => {
   return (
@@ -14,8 +15,9 @@ const Music = ({deezerID} :any) => {
         alt="Deezer"/> 
          
        </div>
-      {/* <DeezerPlaylist /> */}
-      {/* deezerID={deezerID} */}
+
+       <DeezerPlay
+       deezerID={deezerID} />
 
         
       </div>

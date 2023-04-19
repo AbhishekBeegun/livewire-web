@@ -2,7 +2,7 @@ import React from 'react'
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 
-const EventMusicVideo = () => {
+const EventMusicVideo = ({artist} : any) => {
   return (
     <div className="py-4 px-2 bg-black lg:px-96 w-full">
        
@@ -14,14 +14,14 @@ const EventMusicVideo = () => {
      <div className=''>
      <LiteYouTubeEmbed 
      poster="hqdefault"
-        id="S8ZUB9z8OGA"
+        id={artist?.videoLinks[0]}
         title='' />
  
      </div>
      <div className=''>
      <LiteYouTubeEmbed 
         poster="hqdefault"
-        id="wjJKYwMSRAo"
+        id={artist?.videoLinks[1]}
         title='' />
  
      </div>

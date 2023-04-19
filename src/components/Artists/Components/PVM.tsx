@@ -8,7 +8,7 @@ const PVM = ({photos,video,deezer} : any) => {
     <>
     <Picture grid={photos}/>
     <Video video={video}/>
-    <Music deezerID={deezer}/>
+    {/* <Music deezerID={deezer}/> */}
     </>
   )
 }

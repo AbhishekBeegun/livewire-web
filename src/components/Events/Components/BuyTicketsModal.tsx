@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
+import Link from 'next/link'
+import React, { useState,useEffect } from 'react'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 
 
-const BuyTicketsModal = ({setShowModal} : any) => {
+const BuyTicketsModal = ({setShowModal,title ,nmrl,vip,vvip} : any) => {
 
-  const [prices] = useState<any>(["900","1800","3000"])
+
+  const n = nmrl
+  const v = vip
+  const vv = vvip
+  const [prices] = useState<any>([n,v,vv])
 
   const qty : any = [1 , 2 , 3 , 4 , 5 ]
 
@@ -29,6 +34,13 @@ const BuyTicketsModal = ({setShowModal} : any) => {
     setIsQtySelected(true)
     
   }
+
+  useEffect(() => {
+    localStorage.setItem('price', JSON.stringify(selectPrice));
+    localStorage.setItem('qty', JSON.stringify(selectQTY))
+    localStorage.setItem('EventName', JSON.stringify(title));
+
+  }, [selectPrice,selectQTY]);
 
   const total = selectPrice! * selectQTY!
 
@@ -100,10 +112,11 @@ const BuyTicketsModal = ({setShowModal} : any) => {
             <div className="flex flex-row justify-between px-4 py-8 items-center">
             <p 
             className="text-white text-xs font-semibold">TOTAL : Rs {total}</p>
-            <button className='bg-[#FE9D1A] rounded-full p-1 hover:scale-110 transition-all' 
+            <Link href={"/userticket"} 
+             className='bg-[#FE9D1A] rounded-full p-1 hover:scale-110 transition-all' 
             onClick={() => {}}>
             <AiOutlineArrowRight size={25} color="black" />
-            </button>
+            </Link>
             </div>
             : <p 
             className="text-white text-xs font-semibold uppercase m-auto py-8">Select Both options above to continue</p>         

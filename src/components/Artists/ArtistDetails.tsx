@@ -21,6 +21,7 @@ const ArtistDetails = ({ARD} :any) => {
     desc={ARD.artistDescription}
     />
     <Reviews
+    name={ARD.name}
     rating={ARD.rating}
     insta={ARD.socialLinks}
     />

@@ -21,6 +21,7 @@ const server = z.object({
   DISCORD_CLIENT_ID: z.string(),
   DISCORD_CLIENT_SECRET: z.string(),
   HYGRAPHQL_ENDPOINT : z.string(),
+  DEEZER_KEY:z.string(),
 
 });
 
@@ -45,6 +46,7 @@ const processEnv = {
   DISCORD_CLIENT_ID: process.env.DISCORD_CLIENT_ID,
   DISCORD_CLIENT_SECRET: process.env.DISCORD_CLIENT_SECRET,
   HYGRAPHQL_ENDPOINT:process.env.HYGRAPHQL_ENDPOINT,
+  DEEZER_KEY:process.env.DEEZER_KEY
   // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
 };
 

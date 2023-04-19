@@ -77,4 +77,6 @@ export async function getStaticProps() {
         UPE
       }
     }
+
+    
 }

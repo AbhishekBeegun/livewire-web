@@ -5,9 +5,9 @@ import {IoIosArrowUp,IoIosArrowDown} from "react-icons/io"
 import BuyTicketsModal from './BuyTicketsModal'
 
 
-const EventAbout = () => {
+const EventAbout = ({desc,title,nmrl,vip,vvip} : any) => {
 
-  const [ShowMore, setShowMore] = useState<Boolean>(false)
+  const [ShowMore, setShowMore] = useState<Boolean>(true)
 
   const [ShowModal, setShowModal] = useState(false)
 
@@ -44,7 +44,12 @@ const EventAbout = () => {
 
         {
           ShowModal ? 
-          <BuyTicketsModal setShowModal={setShowModal}/>
+          <BuyTicketsModal 
+          nmrl={nmrl}
+          vip={vip}
+          vvip={vvip}
+          title={title}
+          setShowModal={setShowModal}/>
           : <></>
         }
 
@@ -54,11 +59,11 @@ const EventAbout = () => {
           className="text-lg font-semibold text-white py-2">About</p>
           {ShowMore ? 
           <div className="w-full h-[10vh] overflow-hidden">
-            <p className="text-gray-500 text-xs">artistDescription</p>
+            <p className="text-gray-500 text-xs">{desc}</p>
           </div> :
            <div className="w-full h-auto overflow-hidden">
              <p 
-             className="text-gray-500 text-xs">artistDescriptionfull</p>
+             className="text-gray-500 text-xs">{desc}</p>
            </div>}
 
 
