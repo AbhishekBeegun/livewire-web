@@ -40,7 +40,7 @@ const Reviews = ({rating,insta,name} : any) => {
         <p 
         className="font-semibold text-black">Reviews</p>
         <div className="flex flex-row gap-2 items-center">
-         {/* {Stars} */}
+         {Stars}
         </div>
     
       </div>
@@ -53,10 +53,10 @@ const Reviews = ({rating,insta,name} : any) => {
 
         </div>
 
-        {/* <div className="flex flex-row gap-2 items-center py-2">
+        <div className="flex flex-row gap-2 items-center py-2">
          {Stars}
         </div>
-         */}
+        
 
 
           {ShowMore ? 

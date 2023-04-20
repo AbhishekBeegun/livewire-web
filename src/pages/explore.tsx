@@ -7,8 +7,14 @@ import {getApolloClient} from '~/lib/apollo-client'
 import { LOCALARTIST_QUERY } from '~/lib/Queries'
 import { ARTIST_QUERY } from '~/lib/Queries'
 import { EVENT_QUERY } from '~/lib/Queries'
+import Image from 'next/image'
+import logo from '../../public/logo-r.png'
+
 
 const explore = ({LA,FA,UPE} : any) => {
+
+ const [FakeLoading, setFakeLoading] = useState(true)
+
  const [LocalArtist, setLocalArtist] = useState()
 
  const [FeaturedArtists, setFeaturedArtists] = useState()
@@ -20,14 +26,25 @@ const explore = ({LA,FA,UPE} : any) => {
    setFeaturedArtists(FA)
    setUpcomEvents(UPE)
 
+   setFakeLoading(false)
  }, [])
  
   return (
+    <>
+    {!FakeLoading ? 
+
     <>
     <Banner/>
     <LocalTalent LA={LocalArtist}/>
     <FeaturedArtist FA={FeaturedArtists}/>
     <UpcomeEvents UPE={UpcomEvents}/>
+    </>
+    :
+    <div className='h-[80vh] w-screen flex justify-center items-center bg-black transition-all'>
+    <Image className='h-32 w-32 animate-pulse' src={logo} alt="LiveWire"/>
+
+    </div>
+    } 
     </>
   )
 }
