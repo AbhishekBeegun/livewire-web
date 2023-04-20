@@ -1,27 +1,22 @@
 import React from 'react'
 import { useState } from 'react';
-import { useCallback } from 'react';
-import ImageViewer from 'react-simple-image-viewer';
-
+import PictureModal from './PictureModal';
+import { useLockedBody } from 'usehooks-ts';
 
 const Picture = ({grid} : any) => {
 
+  const [ShowModal, setShowModal] = useState(false)
+  const [locked, setLocked] = useLockedBody(false, 'root')
+  const [CurrentImg, setCurrentImg] = useState()
 
-  const [currentImage, setCurrentImage] = useState(0);
-  const [isViewerOpen, setIsViewerOpen] = useState(false);
-
-  const openImageViewer = useCallback((index: React.SetStateAction<number>) => {
-    setCurrentImage(index);
-    setIsViewerOpen(true);
-  }, []);
-
-  const closeImageViewer = () => {
-    setCurrentImage(0);
-    setIsViewerOpen(false);
-  };
-
+  function openImgModal(img : any){
+    setShowModal(!ShowModal)
+    setLocked(!locked)
+    setCurrentImg(img)
+    console.log(CurrentImg)
+  }
   return (
-    <div className="px-2 py-2 lg:px-96 bg-black">
+    <div className="px-2 py-2 lg:px-96 bg-black relative">
     {/* photos */}
     <div className="rounded-lg ">
       <div className="px-4 py-2 bg-white rounded-t-lg">
@@ -32,30 +27,29 @@ const Picture = ({grid} : any) => {
     </div>
 
     <div className='flex flex-row flex-wrap w-full'>
-      {grid && grid?.map( (o: any,index:any) => (
+      {grid && grid?.map( (o: any) => (
         <div className='w-1/2'>
 
         <img className='h-[200px] lg:h-[350px] w-full object-cover bg-white'
           src={ o.url }
-          onClick={ () => openImageViewer(index) }
-          key={ index }
+          onClick={ () => openImgModal(o.url) }
           alt="img"
           />
           </div>
 
       ))}
-      {isViewerOpen && (
-        <div className='z-50'>
-        <ImageViewer
-          src={ grid }
-          currentIndex={ currentImage }
-          disableScroll={ false }
-          closeOnClickOutside={ true }
-          onClose={ closeImageViewer }
-          />
-          </div>
-      )}
+
     </div>
+
+    {ShowModal ? 
+
+    <PictureModal
+    CurrentImg={CurrentImg}
+    setCurrentImg={setCurrentImg}
+    setLocked={setLocked}
+     setShowModal={setShowModal}/> 
+
+    : <></>}
     </div>
   )
 }

@@ -7,7 +7,7 @@ const SearchResult = ({artist} :any) => {
 
   return (
 
-    <div className='flex flex-col justify-center px-2 py-20 h-screen bg-black lg:py-8 lg:px-64  text-white'>
+    <div className='flex flex-col justify-center px-2 py-20 h-screen bg-black lg:py-12 lg:px-64  text-white'>
          
  <Swiper
 

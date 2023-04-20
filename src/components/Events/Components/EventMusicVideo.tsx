@@ -13,14 +13,14 @@ const EventMusicVideo = ({artist} : any) => {
    
      <div className=''>
      <LiteYouTubeEmbed 
-     poster="hqdefault"
+     poster="maxresdefault"
         id={artist?.videoLinks[0]}
         title='' />
  
      </div>
      <div className=''>
      <LiteYouTubeEmbed 
-        poster="hqdefault"
+        poster="maxresdefault"
         id={artist?.videoLinks[1]}
         title='' />
  

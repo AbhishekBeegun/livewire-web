@@ -20,8 +20,8 @@ const FirstScreen = () => {
           <p className=" text-xs lg:text-xl font-semibold text-gray-300">LiveWire is the easiest way to book tickets for live music and artist for private parties, colleges, bars, weddings & more.</p>
           <div className="flex flex-col gap-2">
             <button className="px-4 py-2 flex items-center gap-2 bg-white rounded-full font-semibold hover:scale-105 transition-all text-[#a4c639]">
-              <p>Download for Android</p>
-               <IoLogoAndroid size={20}/>
+               <IoLogoAndroid size={20}/> 
+              <p>Download Android App</p>
             </button>
 
             

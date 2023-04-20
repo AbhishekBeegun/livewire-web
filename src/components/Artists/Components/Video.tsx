@@ -15,14 +15,14 @@ const Video = ({video} : any) => {
    
      <div className=''>
      <LiteYouTubeEmbed 
-     poster="hqdefault"
+     poster="maxresdefault"
         id={video[0]}
         title='' />
  
      </div>
      <div className=''>
      <LiteYouTubeEmbed 
-        poster="hqdefault"
+        poster="maxresdefault"
         id={video[1]}
         title='' />
  

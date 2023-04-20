@@ -2,6 +2,7 @@ import React from 'react'
 import {Swiper, SwiperSlide}  from 'swiper/react'
 import 'swiper/css';
 import ArtistCard from '../Artists/ArtistCard';
+import Link from 'next/link';
 
 
 const LocalTalent = ({LA} :any) => {
@@ -11,7 +12,6 @@ const LocalTalent = ({LA} :any) => {
          
         <div className='flex justify-between w-full items-baseline'>
         <h1 className='py-2 text-xl'>Local Talents</h1>
-        <p className='text-xs'>Show All</p>
         </div>
 
      <Swiper

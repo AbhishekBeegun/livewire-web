@@ -2,6 +2,7 @@ import React from 'react'
 import {Swiper, SwiperSlide}  from 'swiper/react'
 import 'swiper/css';
 import ArtistCard from '../Artists/ArtistCard';
+import Link from 'next/link';
 
 const FeaturedArtist = ({FA} :any) => {
 
@@ -10,7 +11,8 @@ const FeaturedArtist = ({FA} :any) => {
          
         <div className='flex justify-between w-full items-baseline'>
         <h1 className='py-2 text-xl'>Featured</h1>
-        <p className='text-xs'>Show All</p>
+        <Link href={'/AllArtists'} 
+        className='text-xs hover:scale-110 transition-all'>Show All</Link>
         </div>
 
      <Swiper
