@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import { useState } from 'react'
 import {IoMenu,IoClose} from 'react-icons/io5'
@@ -24,7 +25,9 @@ const Menu = () => {
 
     {Show ?
     <div className='w-full fixed top-12 h-[50vh] bg-red-500 opacity-80'>
-
+      <Link href={"/postermaker"}>
+        postermaker
+      </Link>
     </div> : <></>
     }
     </>
