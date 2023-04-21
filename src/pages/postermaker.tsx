@@ -15,15 +15,18 @@ const Postermaker = () => {
     const [BkImg, setBkImg] = useState<any>(
         "https://media.istockphoto.com/id/1335565472/vector/versus-vs-fight-battle-red-and-blue-background-screen-design.jpg?s=612x612&w=0&k=20&c=wNiRZMlVIFO780H8YxSLAWgWTT5yO9w17oDIuoqpFLk="   
     )
-    const [Title, setTitle] = useState<any>("Lil Pump")
+    const [Title, setTitle] = useState<any>()
     const [TitleSize, setTitleSize] = useState(75)
 
     const [ImgPoster, setImgPoster] = useState<any>(img)
     const [ImgScale, setImgScale] = useState(1.2)
 
-    const [Elocation, setElocation] = useState<any>("Cote dór")
-    const [ElocationSize, setElocationSize] = useState(20)
+    const [Elocation, setElocation] = useState<any>()
+    const [ElocationSize, setElocationSize] = useState(30)
 
+
+    const [Edate, setEdate] = useState()
+    const [EdateSize, setEdateSize] = useState(30)
 
    
   return (
@@ -37,7 +40,8 @@ const Postermaker = () => {
         setBkImg={setBkImg}
         TitleSize={TitleSize} setTitleSize={setTitleSize}
         ImgScale={ImgScale} setImgScale={setImgScale}
-        ElocationSize={ElocationSize} setElocationSize={setElocationSize}/>
+        ElocationSize={ElocationSize} setElocationSize={setElocationSize}
+        setEdateSize={setEdateSize} EdateSize ={EdateSize}/>
         </>
          : <></>
         }
@@ -50,13 +54,9 @@ const Postermaker = () => {
         ImgScale={ImgScale}
         Elocation={Elocation} setElocation={setElocation}
         ElocationSize={ElocationSize}
+        Edate={Edate} setEdate={setEdate}
+        EdateSize ={EdateSize}
         />
-
-      
-       
-       
-       
-
   </div>
 
 

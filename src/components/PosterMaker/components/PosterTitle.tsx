@@ -5,12 +5,15 @@ const PosterTitle = (
   TitleSize} : any) => {
   return (
     <div className='text-center' >
-    <p style={{
+
+    <input
+    style={{
       fontSize :`${TitleSize}px`,
-    }}>
-    {Title}
-    </p>
-    <input value={Title}
+      color : '#f44000'
+    }}
+     className='bg-transparent text-center'
+     value={Title}
+    placeholder='Enter Title'
     onChange={(e) => setTitle(e.target.value)}  />
     </div>
   )

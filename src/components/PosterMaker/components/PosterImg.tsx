@@ -5,9 +5,9 @@ const PosterImg = ({ImgPoster ,ImgScale} :any) => {
   return (
     <div>
       <img style={{
-        scale : `${ImgScale}`
+        scale : `${ImgScale}`,
       }} 
-      src={ImgPoster.src} alt='ImgPoster' className='w-full h-full' />
+      src={ImgPoster.src} alt='ImgPoster' className='w-full h-full z-10 rounded-full' />
     </div>
   )
 }

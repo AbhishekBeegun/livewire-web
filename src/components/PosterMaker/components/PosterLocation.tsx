@@ -5,13 +5,15 @@ const PosterLocation = ({
   ElocationSize,
 } : any) => {
   return (
-    <div className='text-center' >
-    <p style={{
+    <div className='text-center w-full z-20' >
+    <input
+    style={{
       fontSize :`${ElocationSize}px`,
-    }}>
-    {Elocation}
-    </p>
-    <input value={Elocation}
+      color : "#FECACA"
+    }}
+    placeholder='Enter Event Location'
+    className='bg-transparent text-center w-full'
+    value={Elocation}
     onChange={(e) => setELocation(e.target.value)}  />
     </div>
   )

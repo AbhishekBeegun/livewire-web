@@ -10,7 +10,9 @@ const Templateone = (
   TitleSize,
   ImgPoster,ImgScale,
   Elocation, setElocation,
-  ElocationSize,} : any) => {
+  ElocationSize,
+  Edate,setEdate ,
+  EdateSize} : any) => {
 
   return (
     <div className='flex flex-col overflow-hidden justify-evenly items-center w-[600px] h-[850px] border'>
@@ -29,7 +31,9 @@ const Templateone = (
       <PosterLocation
       Elocation={Elocation} setELocation={setElocation}
       ElocationSize={ElocationSize} />
-      <PosterDate />
+
+      <PosterDate Edate={Edate} setEdate={setEdate}
+       EdateSize ={EdateSize}/>
     </div>
   )
 }

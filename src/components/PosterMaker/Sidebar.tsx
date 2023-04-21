@@ -4,20 +4,22 @@ import TitleControl from './components/TitleControl'
 import BackgroundImg from './components/BackgroundImg'
 import ImgControl from './components/ImgControl'
 import LocationControl from './components/LocationControl'
+import DateControl from './components/DateControl'
 
 const Sidebar = (
   {setShowSidebar,
   setBkImg,
   TitleSize,setTitleSize,
   ImgScale,setImgScale,
-  ElocationSize,setElocationSize} : any) => {
+  ElocationSize,setElocationSize,
+  setEdateSize, EdateSize} : any) => {
   return (
     <div className='fixed top-0 left-0 h-screen w-96 z-50
-     bg-red-200 flex flex-col items-center'>
+     flex flex-col items-center bg-black text-white'>
         <button
-        className='p-4 bg-white rounded-lg' 
+        className='p-2 bg-white rounded-lg' 
         onClick={() => setShowSidebar(false)}>
-          <IoMdClose size={20} />
+          <IoMdClose size={20} color='black' />
         </button>
 
         <BackgroundImg setBkImg={setBkImg}/>
@@ -28,7 +30,13 @@ const Sidebar = (
         <ImgControl 
         ImgScale={ImgScale} setImgScale={setImgScale} />
 
-        <LocationControl ElocationSize={ElocationSize} setElocationSize={setElocationSize} />
+        <LocationControl 
+        ElocationSize={ElocationSize} setElocationSize={setElocationSize} />
+        
+
+        <DateControl 
+        setEdateSize={setEdateSize} EdateSize ={EdateSize}
+        />
     </div>
   )
 }
