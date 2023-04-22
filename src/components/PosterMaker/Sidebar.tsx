@@ -10,12 +10,13 @@ const Sidebar = (
   {setShowSidebar,
   setBkImg,
   TitleSize,setTitleSize,
+  ImgPoster, setImgPoster,
   ImgScale,setImgScale,
   ElocationSize,setElocationSize,
   setEdateSize, EdateSize} : any) => {
   return (
     <div className='fixed top-0 left-0 h-screen w-96 z-50
-     flex flex-col items-center bg-black text-white'>
+     flex flex-col items-center bg-black text-white overflow-scroll'>
         <button
         className='p-2 bg-white rounded-lg' 
         onClick={() => setShowSidebar(false)}>
@@ -28,6 +29,7 @@ const Sidebar = (
         TitleSize={TitleSize} setTitleSize={setTitleSize}/>
 
         <ImgControl 
+        ImgPoster={ImgPoster} setImgPoster={setImgPoster}
         ImgScale={ImgScale} setImgScale={setImgScale} />
 
         <LocationControl 

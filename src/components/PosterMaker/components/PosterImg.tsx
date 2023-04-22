@@ -7,7 +7,7 @@ const PosterImg = ({ImgPoster ,ImgScale} :any) => {
       <img style={{
         scale : `${ImgScale}`,
       }} 
-      src={ImgPoster.src} alt='ImgPoster' className='w-full h-full z-10 rounded-full' />
+      src={ImgPoster} alt='ImgPoster' className='w-full h-full z-10 rounded-full' />
     </div>
   )
 }
