@@ -4,7 +4,7 @@ const BackgroundImg = ({setBkImg} : any) => {
 
   const [CurrentImg, setCurrentImg] = useState<any>()
   return (
-    <div className='flex flex-col justify-center w-[25vw] items-center border-y py-4 '>
+    <div className='flex flex-col justify-center w-full h-full items-center border-y py-4 '>
     <p className='text-xl py-4'>SET BACKGROUND IMAGE</p>
     <p>----- URL ONLY -----</p>
     <form className='py-4'>

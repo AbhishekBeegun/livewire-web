@@ -71,7 +71,7 @@ const Sidebar = (
 
 
   return (
-    <div className='fixed top-0 left-0 lg:h-screen w-[50vw] lg:w-[30vw] z-50
+    <div className='fixed top-0 left-0 lg:h-screen lg:w-[30vw] z-50
      flex flex-row items-center bg-black text-white overflow-scroll'>
         <button
         className='p-2 absolute top-2 right-4 bg-white rounded-lg' 

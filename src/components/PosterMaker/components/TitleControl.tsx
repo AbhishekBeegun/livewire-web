@@ -13,7 +13,7 @@ const TitleControl = (
 
     }
   return (
-    <div className='border-b flex flex-col items-center h-screen w-[25vw] justify-center'>
+    <div className='border-b flex flex-col items-center w-full h-full justify-center'>
     
     <div className='border-y py-4 w-full text-center'>
     <p className='text-2xl py-2'>Enter Title</p>

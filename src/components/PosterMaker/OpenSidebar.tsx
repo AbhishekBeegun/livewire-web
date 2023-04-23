@@ -1,12 +1,12 @@
 import React from 'react'
-import {VscLayoutSidebarLeft} from "react-icons/vsc"
+import {BiMenuAltLeft} from "react-icons/bi"
 
 const OpenSidebar = ({setShowSidebar} : any) => {
   return (
     <button
     onClick={() => setShowSidebar(true)} 
-    className='fixed z-50 p-2 top-1 left-10 border rounded-lg bg-white'>
-    <VscLayoutSidebarLeft size={20} />
+    className='fixed z-50 p-2 top-1 left-10 text-white rounded-lg'>
+    <BiMenuAltLeft size={25} />
     </button>
   )
 }

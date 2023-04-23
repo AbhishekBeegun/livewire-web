@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Sidebar from '~/components/PosterMaker/Sidebar'
 import OpenSidebar from '~/components/PosterMaker/OpenSidebar'
 import Templateone from '~/components/PosterMaker/Template/Templateone'
+import Templatetwo from '~/components/PosterMaker/Template/Templatetwo'
 
 const Postermaker = () => {
 
@@ -70,6 +71,22 @@ const Postermaker = () => {
         EdateColor={EdateColor}
         EdateSize ={EdateSize}
         />
+
+
+        <Templatetwo
+        BkImg={BkImg}    
+        Title={Title} setTitle={setTitle}
+        TitleSize={TitleSize} TitleColor={TitleColor}
+        ImgPoster={ImgPoster}
+        ImgScale={ImgScale}
+        Elocation={Elocation} setElocation={setElocation}
+        ElocationSize={ElocationSize}
+        ElocationColor={ElocationColor}
+        Edate={Edate}
+        EdateColor={EdateColor}
+        EdateSize ={EdateSize}/>
+  
+  
   </div>
 
 

@@ -16,7 +16,7 @@ const Templateone = (
   EdateSize} : any) => {
 
   return (
-    <div className='flex flex-col overflow-hidden justify-evenly items-center w-[600px] h-[850px] border'>
+    <div className='flex flex-col overflow-hidden justify-evenly items-center lg:w-[600px] lg:h-[850px] border'>
       
       <img className='absolute w-[600px] h-[850px] -z-10 object-cover'
        src={BkImg} alt='backimg' />
@@ -34,8 +34,7 @@ const Templateone = (
       ElocationSize={ElocationSize} 
       ElocationColor={ElocationColor}/>
 
-      <PosterDate Edate={Edate} 
-      EdateColor={EdateColor}
+      <PosterDate Edate={Edate} EdateColor={EdateColor}
        EdateSize ={EdateSize}/>
 
        <div className='w-10 h-auto z-40'>

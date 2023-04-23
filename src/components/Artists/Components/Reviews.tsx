@@ -5,9 +5,8 @@ import {IoIosArrowUp,IoIosArrowDown} from "react-icons/io"
 
 const Reviews = ({rating,insta,name} : any) => {
 
-  const ratin = rating
 
-  const [Stars] = useState<any>([])
+
 
   const [ShowMore, setShowMore] = useState<Boolean>(true)
 
@@ -15,11 +14,6 @@ const Reviews = ({rating,insta,name} : any) => {
   function handleShowMore(){
     setShowMore(!ShowMore)
   }
-
-    for(let i = 0 ; i < rating ; i++){
-      Stars.push(
-      <IoIosStar key={i} size={15} color="gold"/>)
-    }
     
     const desc=`We were very happy with ${name} and LiveWire 
     help with the event.
@@ -40,7 +34,8 @@ const Reviews = ({rating,insta,name} : any) => {
         <p 
         className="font-semibold text-black">Reviews</p>
         <div className="flex flex-row gap-2 items-center">
-         {Stars}
+         <p>{rating}</p>
+         <IoIosStar size={15} color="gold"/>
         </div>
     
       </div>
@@ -54,7 +49,12 @@ const Reviews = ({rating,insta,name} : any) => {
         </div>
 
         <div className="flex flex-row gap-2 items-center py-2">
-         {Stars}
+        <IoIosStar size={15} color="gold"/>
+        <IoIosStar size={15} color="gold"/>
+        <IoIosStar size={15} color="gold"/>
+        <IoIosStar size={15} color="gold"/>
+        <IoIosStar size={15} color="gold"/>
+
         </div>
         
 
