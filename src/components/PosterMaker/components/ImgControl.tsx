@@ -8,7 +8,7 @@ const ImgControl = (
 
     const [CurrentPoster, setCurrentPoster] = useState<any>()
   return (
-    <div className='border-b flex flex-col items-center w-full text-2xl py-2'>  
+    <div className='border-b flex flex-col items-center h-full w-full text-2xl py-2'>  
     
     {/* img poster */}
     <div>
@@ -23,9 +23,9 @@ const ImgControl = (
     />
     </form>
 
-    <div className='w-full h-[200px] flex items-center justify-center py-2 px-2'>
+    <div className='w-full flex items-center justify-center py-2'>
       <img className='w-full h-full object-contain border'
-       src={CurrentPoster} alt='No BackGround image set'/>
+       src={CurrentPoster} alt=''/>
     </div>
 
     {/* img scaler  */}   
@@ -39,6 +39,8 @@ const ImgControl = (
     min={0.5} max={2.5} step={0.1}
     onChange={(e) => setImgScale(e.target.value)}
      />
+
+     
     </div>
   )
 }

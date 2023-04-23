@@ -1,5 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
+import logo from "../../../public/logo-r.png"
+import Image from 'next/image'
 import {IoMdClose} from "react-icons/io"
+import {MdImagesearchRoller,MdImage,MdTitle,MdZoomOutMap,
+MdLocationOn,MdDateRange,MdQuestionMark} from "react-icons/md"
 import TitleControl from './components/TitleControl'
 import BackgroundImg from './components/BackgroundImg'
 import ImgControl from './components/ImgControl'
@@ -9,36 +13,148 @@ import DateControl from './components/DateControl'
 const Sidebar = (
   {setShowSidebar,
   setBkImg,
-  TitleSize,setTitleSize,
+  Title,setTitle,
+  TitleSize,setTitleSize,setTitleColor,
   ImgPoster, setImgPoster,
   ImgScale,setImgScale,
+  Elocation,setElocation,
   ElocationSize,setElocationSize,
-  setEdateSize, EdateSize} : any) => {
+  setElocationColor,
+  setEdateSize, EdateSize,
+  setEdateColor} : any) => {
+
+
+    const [ShowTitle, setShowTitle] = useState<any>(true)
+    const [ShowBckImg, setShowBckImg] = useState<any>(false)
+    const [ShowImgPoster, setShowImgPoster] = useState<any>(false)
+    const [ShowElocation, setShowElocation] = useState<any>(false)
+    const [ShowEdate, setShowEdate] = useState<any>(false)
+
+   function ClickTitle(){
+    setShowTitle(true)
+    setShowBckImg(false)
+    setShowImgPoster(false)
+    setShowElocation(false)
+    setShowEdate(false)
+   }
+   function ClickBckImg(){
+    setShowTitle(false)
+    setShowBckImg(true)
+    setShowImgPoster(false)
+    setShowElocation(false)
+    setShowEdate(false)
+   }
+   function ClickImgPoster(){
+    setShowTitle(false)
+    setShowBckImg(false)
+    setShowImgPoster(true)
+    setShowElocation(false)
+    setShowEdate(false)
+   }
+
+   function ClickElocation(){
+    setShowTitle(false)
+    setShowBckImg(false)
+    setShowImgPoster(false)
+    setShowElocation(true)
+    setShowEdate(false)
+   }
+   function ClickEdate(){
+    setShowTitle(false)
+    setShowBckImg(false)
+    setShowImgPoster(false)
+    setShowElocation(false)
+    setShowEdate(true)
+   }
+
+
+
   return (
-    <div className='fixed top-0 left-0 h-screen w-96 z-50
-     flex flex-col items-center bg-black text-white overflow-scroll'>
+    <div className='fixed top-0 left-0 h-screen w-[30vw] z-50
+     flex flex-row items-center bg-black text-white overflow-scroll'>
         <button
-        className='p-2 bg-white rounded-lg' 
+        className='p-2 absolute top-2 right-4 bg-white rounded-lg' 
         onClick={() => setShowSidebar(false)}>
           <IoMdClose size={20} color='black' />
         </button>
 
-        <BackgroundImg setBkImg={setBkImg}/>
+        <div className='flex flex-col items-center px-4 h-screen text-2xl text-black gap-10 border-r'>
+        <button className='w-12 h-auto'>
+          <Image src={logo} alt="Logo" />
+        </button>
 
+        <button
+        onClick={ClickTitle} 
+        className='p-2 rounded-lg focus:bg-orange-400 bg-white'><MdTitle/></button>
+
+        <button 
+        onClick={ClickBckImg}
+        className='p-2 rounded-lg focus:bg-orange-400 bg-white'><MdImagesearchRoller/></button>
+
+        <button 
+        onClick={ClickImgPoster}
+        className='p-2 rounded-lg focus:bg-orange-400 bg-white'><MdImage/></button>
+
+        <button 
+        onClick={ClickElocation}
+        className='p-2 rounded-lg focus:bg-orange-400 bg-white'><MdLocationOn/></button>
+
+        <button 
+        onClick={ClickEdate}
+        className='p-2 rounded-lg focus:bg-orange-400 bg-white'><MdDateRange/></button>
+
+        <button className='p-2 rounded-lg focus:bg-orange-400 bg-white'><MdQuestionMark/></button>
+
+
+
+        </div>
+
+
+        {ShowTitle ? 
         <TitleControl 
-        TitleSize={TitleSize} setTitleSize={setTitleSize}/>
+        Title={Title} setTitle={setTitle}
+        TitleSize={TitleSize} setTitleSize={setTitleSize}
+        setTitleColor={setTitleColor}/>
+        : 
+        <></>
+  }
+        
+        
+        
+        {ShowBckImg ? 
+        <BackgroundImg 
+        setBkImg={setBkImg}/>
+        :<></>
+        }
+       
+    
+    
 
+        {ShowImgPoster ? 
         <ImgControl 
         ImgPoster={ImgPoster} setImgPoster={setImgPoster}
         ImgScale={ImgScale} setImgScale={setImgScale} />
-
+        : <></>
+        }
+         
+        {ShowElocation ?
         <LocationControl 
-        ElocationSize={ElocationSize} setElocationSize={setElocationSize} />
+        Elocation={Elocation} setElocation={setElocation}
+        ElocationSize={ElocationSize} setElocationSize={setElocationSize}
+        setElocationColor={setElocationColor} />
+        :
+        <></>
+        }
         
-
+        
+        {ShowEdate ? 
         <DateControl 
         setEdateSize={setEdateSize} EdateSize ={EdateSize}
+        setEdateColor={setEdateColor}
         />
+        :
+        <></>}
+        
     </div>
   )
 }

@@ -6,7 +6,7 @@ const PosterDate = ({Edate,setEdate ,EdateSize} : any ) => {
     <input
     style={{
       fontSize :`${EdateSize}px`,
-      color : "#FECACA"
+      color : "#F40000"
     }}
     placeholder='Enter Event Date'
     className='bg-transparent text-center w-full'

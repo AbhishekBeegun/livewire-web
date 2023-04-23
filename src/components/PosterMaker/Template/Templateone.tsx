@@ -1,15 +1,16 @@
 import React from 'react'
+import Image from 'next/image'
 import PosterTitle from '../components/PosterTitle'
 import PosterImg from '../components/PosterImg'
 import PosterLocation from '../components/PosterLocation'
 import PosterDate from '../components/PosterDate'
-
+import logo from "../../../../public/logo-r.png"
 const Templateone = (
   {BkImg,
   Title,setTitle,
-  TitleSize,
+  TitleSize,TitleColor,
   ImgPoster,ImgScale,
-  Elocation, setElocation,
+  Elocation, ElocationColor,
   ElocationSize,
   Edate,setEdate ,
   EdateSize} : any) => {
@@ -22,18 +23,25 @@ const Templateone = (
       
       <PosterTitle 
       Title={Title} setTitle={setTitle}
-      TitleSize={TitleSize}/>
+      TitleSize={TitleSize} TitleColor={TitleColor}/>
       
       <PosterImg 
       ImgPoster={ImgPoster} 
       ImgScale={ImgScale}/>
       
       <PosterLocation
-      Elocation={Elocation} setELocation={setElocation}
-      ElocationSize={ElocationSize} />
+      Elocation={Elocation}
+      ElocationSize={ElocationSize} 
+      ElocationColor={ElocationColor}/>
 
       <PosterDate Edate={Edate} setEdate={setEdate}
        EdateSize ={EdateSize}/>
+
+       <div className='w-16 h-auto z-50'>
+        <Image src={logo} alt="" />
+       </div>
+
+
     </div>
   )
 }
