@@ -12,7 +12,7 @@ const Templateone = (
   ImgPoster,ImgScale,
   Elocation, ElocationColor,
   ElocationSize,
-  Edate,setEdate ,
+  Edate,EdateColor ,
   EdateSize} : any) => {
 
   return (
@@ -34,10 +34,11 @@ const Templateone = (
       ElocationSize={ElocationSize} 
       ElocationColor={ElocationColor}/>
 
-      <PosterDate Edate={Edate} setEdate={setEdate}
+      <PosterDate Edate={Edate} 
+      EdateColor={EdateColor}
        EdateSize ={EdateSize}/>
 
-       <div className='w-16 h-auto z-50'>
+       <div className='w-10 h-auto z-40'>
         <Image src={logo} alt="" />
        </div>
 

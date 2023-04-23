@@ -16,7 +16,7 @@ const Postermaker = () => {
     const [TitleColor, setTitleColor] = useState("#F40000")
 
     const [ImgPoster, setImgPoster] = useState<any>(
-     "https://o.remove.bg/downloads/d93d778b-d617-4d8b-91ed-586ff8edfd4f/photo_202110_07_GENERAL-BRIANZIFF_THEWEEKND_800_1-WITH-BEAUTY-crop-1-removebg-preview.png"
+"https://o.remove.bg/downloads/c42075e5-75ab-4394-8b77-ae2ad365c78c/The-Weeknd-2022-removebg-preview.png"
       )
     const [ImgScale, setImgScale] = useState(1.6)
 
@@ -50,6 +50,7 @@ const Postermaker = () => {
         Elocation={Elocation} setElocation={setElocation}
         ElocationSize={ElocationSize} setElocationSize={setElocationSize}
         setElocationColor={setElocationColor}
+        Edate={Edate} setEdate={setEdate}
         setEdateColor={setEdateColor}
         setEdateSize={setEdateSize} EdateSize ={EdateSize}/>
         </>
@@ -65,7 +66,8 @@ const Postermaker = () => {
         Elocation={Elocation} setElocation={setElocation}
         ElocationSize={ElocationSize}
         ElocationColor={ElocationColor}
-        Edate={Edate} setEdate={setEdate}
+        Edate={Edate}
+        EdateColor={EdateColor}
         EdateSize ={EdateSize}
         />
   </div>

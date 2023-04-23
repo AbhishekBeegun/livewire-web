@@ -21,6 +21,7 @@ const Sidebar = (
   ElocationSize,setElocationSize,
   setElocationColor,
   setEdateSize, EdateSize,
+  Edate, setEdate,
   setEdateColor} : any) => {
 
 
@@ -70,7 +71,7 @@ const Sidebar = (
 
 
   return (
-    <div className='fixed top-0 left-0 h-screen w-[30vw] z-50
+    <div className='fixed top-0 left-0 lg:h-screen w-[50vw] lg:w-[30vw] z-50
      flex flex-row items-center bg-black text-white overflow-scroll'>
         <button
         className='p-2 absolute top-2 right-4 bg-white rounded-lg' 
@@ -84,26 +85,33 @@ const Sidebar = (
         </button>
 
         <button
+        title='TITLE'
         onClick={ClickTitle} 
         className='p-2 rounded-lg focus:bg-orange-400 bg-white'><MdTitle/></button>
 
         <button 
+        title='BACKGROUND IMAGE'
         onClick={ClickBckImg}
         className='p-2 rounded-lg focus:bg-orange-400 bg-white'><MdImagesearchRoller/></button>
 
         <button 
+        title='POSTER IMAGE'
         onClick={ClickImgPoster}
         className='p-2 rounded-lg focus:bg-orange-400 bg-white'><MdImage/></button>
 
         <button 
+        title='EVENT LOCATION'
         onClick={ClickElocation}
         className='p-2 rounded-lg focus:bg-orange-400 bg-white'><MdLocationOn/></button>
 
         <button 
+        title='EVENT DATE'
         onClick={ClickEdate}
         className='p-2 rounded-lg focus:bg-orange-400 bg-white'><MdDateRange/></button>
 
-        <button className='p-2 rounded-lg focus:bg-orange-400 bg-white'><MdQuestionMark/></button>
+        <button 
+        title='ISSUES TO FIX'
+        className='p-2 rounded-lg focus:bg-orange-400 bg-white'><MdQuestionMark/></button>
 
 
 
@@ -117,14 +125,15 @@ const Sidebar = (
         setTitleColor={setTitleColor}/>
         : 
         <></>
-  }
+        }
         
         
         
         {ShowBckImg ? 
         <BackgroundImg 
         setBkImg={setBkImg}/>
-        :<></>
+        :
+        <></>
         }
        
     
@@ -134,7 +143,8 @@ const Sidebar = (
         <ImgControl 
         ImgPoster={ImgPoster} setImgPoster={setImgPoster}
         ImgScale={ImgScale} setImgScale={setImgScale} />
-        : <></>
+        : 
+        <></>
         }
          
         {ShowElocation ?
@@ -149,11 +159,13 @@ const Sidebar = (
         
         {ShowEdate ? 
         <DateControl 
+        Edate={Edate} setEdate={setEdate}
         setEdateSize={setEdateSize} EdateSize ={EdateSize}
         setEdateColor={setEdateColor}
         />
         :
-        <></>}
+        <></>
+        }
         
     </div>
   )

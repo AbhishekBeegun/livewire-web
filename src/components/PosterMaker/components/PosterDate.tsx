@@ -1,17 +1,16 @@
 import React from 'react'
 
-const PosterDate = ({Edate,setEdate ,EdateSize} : any ) => {
+const PosterDate = ({Edate,EdateColor ,EdateSize} : any ) => {
   return (
     <div className='text-center w-full z-30' >
-    <input
+    <p
     style={{
       fontSize :`${EdateSize}px`,
-      color : "#F40000"
+      color : `${EdateColor}`
     }}
-    placeholder='Enter Event Date'
-    className='bg-transparent text-center w-full'
-    value={Edate}
-    onChange={(e) => setEdate(e.target.value)}  />
+    >
+    {Edate}
+    </p>
     </div>
   )
 }
