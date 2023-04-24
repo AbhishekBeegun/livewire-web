@@ -8,7 +8,7 @@ const DeezerPlay = ({deezerID} : any) => {
 
     const [Playlistdata, setPlaylistdata] = useState<any>()
 
-    const [isPlaying, setisPlaying] = useState()
+    const [isPlaying] = useState()
 
 
     const options = {
@@ -48,7 +48,6 @@ const DeezerPlay = ({deezerID} : any) => {
       {Playlistdata && Playlistdata?.map((item : any) => {
         return (
           <div key={item?.id}
-          onClick={()=>{} }
           className="w-full h-auto flex flex-row items-center justify-between border px-4 py-1">
             <div className="h-[80px] w-[80px]" >
               <img className="w-full h-full rounded-full"

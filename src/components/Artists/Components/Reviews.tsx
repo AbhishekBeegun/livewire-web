@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React,{useState,useEffect} from 'react'
+import React,{useState} from 'react'
 import {IoLogoInstagram,IoLogoFacebook,IoLogoWhatsapp,IoMdMail,IoIosStar} from "react-icons/io"
 import {IoIosArrowUp,IoIosArrowDown} from "react-icons/io"
 
@@ -8,7 +8,7 @@ const Reviews = ({rating,insta,name} : any) => {
 
 
 
-  const [ShowMore, setShowMore] = useState<Boolean>(true)
+  const [ShowMore, setShowMore] = useState<boolean>(true)
 
 
   function handleShowMore(){

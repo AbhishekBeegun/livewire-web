@@ -1,7 +1,7 @@
 import React from 'react'
 
 const PosterTitle = (
-  {Title,setTitle,
+  {Title,
   TitleSize,TitleColor} : any) => {
   return (
     <div className='text-center'>

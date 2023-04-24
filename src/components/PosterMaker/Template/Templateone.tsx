@@ -6,7 +6,7 @@ import PosterLocation from '../components/PosterLocation'
 import PosterDate from '../components/PosterDate'
 import logo from "../../../../public/logo-r.png"
 
-import * as htmlToImage from 'html-to-image';
+// import * as htmlToImage from 'html-to-image';
 const Templateone = (
   {BkImg,
   Title,setTitle,
@@ -20,15 +20,14 @@ const Templateone = (
     const domEl = useRef(null);
 
 
-    const downloadImage = async () => {
-      const dataUrl = await htmlToImage.toPng(domEl.current!);
+    // const downloadImage = async () => {
+    //   const dataUrl = await htmlToImage.toPng(domEl.current!);
      
-      // download image
-      const link = document.createElement('a');
-      link.download = "html-to-img.png";
-      link.href = dataUrl;
-      link.click();
-    }
+    //   const link = document.createElement('a');
+    //   link.download = "html-to-img.png";
+    //   link.href = dataUrl;
+    //   link.click();
+    // }
 
   return (
 
@@ -57,13 +56,13 @@ const Templateone = (
        EdateSize ={EdateSize}/>
 
        <div className='w-10 h-auto z-40'>
-        <Image src={logo} alt="" />
+        <Image src={logo} alt="logo" />
        </div>
 
 
     </div>
 
-    <button onClick={() => alert("Html-to-image not working")}>Download Image</button>
+    {/* <button onClick={() => alert("Html-to-image not working")}>Download Image</button> */}
 
     </>
   )

@@ -2,13 +2,12 @@ import React from 'react'
 import { useState } from 'react'
 import {IoSearch} from 'react-icons/io5'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 
 //in form button is submit by default
 
 const SearchBar = () => {
 
-   const router = useRouter()
+
 
 
 

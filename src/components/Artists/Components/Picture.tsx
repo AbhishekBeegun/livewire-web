@@ -28,7 +28,9 @@ const Picture = ({grid} : any) => {
 
     <div className='flex flex-row flex-wrap w-full'>
       {grid && grid?.map( (o: any) => (
-        <div className='w-1/2'>
+        <div
+        key={o.url} 
+        className='w-1/2'>
 
         <img className='h-[200px] lg:h-[350px] w-full object-cover bg-white'
           src={ o.url }

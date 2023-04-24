@@ -21,7 +21,7 @@ const EventCard = ({event} : any) => {
 
 
 
-        <div typeof='button' 
+        <div 
         className="flex flex-col justify-between h-full w-full p-2 cursor-pointer"        
         onClick={() => handleCardPress()}> 
 
@@ -29,7 +29,9 @@ const EventCard = ({event} : any) => {
               <div className="flex flex-row justify-between w-full">
    
                 {event.artist.map( (item : any) => (
-                <div className="h-[30px] w-[30px]">
+                <div
+                key={item.url}
+                className="h-[30px] w-[30px]">
                   <img className="w-full h-full rounded-full object-cover"
                    src={item?.mainPhoto.url}/>
                 </div>

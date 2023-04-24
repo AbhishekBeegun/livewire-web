@@ -7,7 +7,7 @@ import {MdDashboard} from "react-icons/md"
 
 const Menu = () => {
 
-    const [Show, setShow] = useState<Boolean>(false)
+    const [Show, setShow] = useState<boolean>(false)
 
     function handleClick(){
         setShow(!Show)
@@ -44,7 +44,7 @@ const Menu = () => {
         <p className='absolute top-0 right-0 p-1 text-xs bg-red-500  rounded-lg animate-ping'>New</p>
       </Link>
 
-      <Link href={""}
+      <Link href={"/mobilefeature"}
       className='py-4 flex justify-around items-center bg-red-500 rounded-lg'>
         <HiOutlineUserCircle size={40} />
         <p>User Tickets</p>

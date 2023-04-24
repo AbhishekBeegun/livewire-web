@@ -25,11 +25,14 @@ const SearchResult = ({artist} :any) => {
 
 {artist && artist.length > 0 && artist.map( (artist: any) => {
 return(
+  <div key={artist?.slug}>
+
 <SwiperSlide>
   
  <ArtistCard artist={artist}/>
 
 </SwiperSlide>
+  </div>
 )}
 )}
 

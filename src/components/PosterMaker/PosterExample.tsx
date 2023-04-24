@@ -7,8 +7,7 @@ const PosterExample = () => {
     <div
     className='h-[600px] w-[600px]'
     >
-     <Swiper
-        
+     <Swiper        
         spaceBetween={1}
         slidesPerView={1.7}
   
@@ -25,14 +24,14 @@ const PosterExample = () => {
       <SwiperSlide>
         <div className='h-[550px] w-[400px]'>
             <img 
-            className='object-cover w-full h-full'
+            className='object-contain w-full h-full'
             src='https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/MRWNsW2bRjW4oFCiCv7y' />
         </div>
       </SwiperSlide>
       <SwiperSlide>
       <div className=' h-[550px] w-[400px]'>
             <img 
-            className='object-cover w-full h-full'
+            className='object-contain w-full h-full'
             src="https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/Q3j72d1aSFiuJSFFwmwv"
             />
         </div>
@@ -40,7 +39,7 @@ const PosterExample = () => {
       <SwiperSlide>
       <div className=' h-[550px] w-[400px]'>
            <img 
-            className='object-cover w-full h-full'
+            className='object-contain w-full h-full'
             src="https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/O783JCkSMyYgBXVRojXg"
             />
         </div>

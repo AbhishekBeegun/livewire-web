@@ -2,7 +2,6 @@ import React from 'react'
 import {Swiper, SwiperSlide}  from 'swiper/react'
 import 'swiper/css';
 import ArtistCard from '../Artists/ArtistCard';
-import Link from 'next/link';
 
 
 const LocalTalent = ({LA} :any) => {
@@ -30,11 +29,15 @@ const LocalTalent = ({LA} :any) => {
 
 {LA && LA.length > 0 && LA.map( (artist: any) => {
   return(
+
+    <div key={artist?.slug}>
+
     <SwiperSlide>
       
      <ArtistCard artist={artist}/>
   
     </SwiperSlide>
+    </div>
   )}
 )}
 

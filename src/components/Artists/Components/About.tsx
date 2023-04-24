@@ -7,7 +7,7 @@ import {IoIosArrowUp,IoIosArrowDown} from "react-icons/io"
 
 const About = ({desc,name} : any) => {
 
-  const [ShowMore, setShowMore] = useState<Boolean>(true)
+  const [ShowMore, setShowMore] = useState<boolean>(true)
 
   function handleWish(){
     alert("Wishlist not setup")

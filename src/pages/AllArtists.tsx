@@ -5,7 +5,7 @@ import { ALLARTIST_QUERY } from '~/lib/Queries'
 
 const AllArtists = ({ALL}:any) => {
 
-    const [ALLARTISTS, setALLARTISTS] = useState(ALL)
+    const [ALLARTISTS] = useState(ALL)
 
 
   return (
@@ -13,7 +13,9 @@ const AllArtists = ({ALL}:any) => {
   {ALLARTISTS && ALLARTISTS.length > 0 && ALLARTISTS.map( (artist: any) => {
   return(
       
-    <div className='w-[150px] lg:w-[250px] z-10'>   
+    <div 
+    key={artist?.slug}
+    className='w-[150px] lg:w-[250px] z-10'>   
         <ArtistCard artist={artist}/>
      </div>    
   

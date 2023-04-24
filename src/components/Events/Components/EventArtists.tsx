@@ -15,7 +15,7 @@ const EventArtists = ({artist} : any ) => {
     className="font-semibold text-black">Event Artists</p>   
   </div>
 
-    <div typeof='button' onClick={() => handleCardPress()}
+    <div onClick={() => handleCardPress()}
      className="flex flex-row justify-center gap-10 w-full items-center px-10 py-4 cursor-pointer">
 
      <div className="h-[90px] w-[90px]">

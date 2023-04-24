@@ -6,7 +6,7 @@ import {getApolloClient} from '~/lib/apollo-client'
 
 const AllEvents = ({ALLEV} : any) => {
 
-    const [ALLEVENTS, setALLEVENTS] = useState(ALLEV)
+    const [ALLEVENTS] = useState(ALLEV)
 
   return (
     
@@ -14,7 +14,10 @@ const AllEvents = ({ALLEV} : any) => {
 
 {ALLEVENTS && ALLEVENTS.length > 0 && ALLEVENTS.map( (event: any) => {
   return(
-      <div className='w-full lg:w-[400px] z-10 py-2'>  
+      <div 
+      key={event?.slug}
+
+      className='w-full lg:w-[400px] z-10 py-2'>  
       <EventCard event = {event}/>
     </div>
   )}

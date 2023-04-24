@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 const ImgControl = (
   {ImgScale,setImgScale,
-  ImgPoster, setImgPoster} : any) => {
+   setImgPoster} : any) => {
 
 
     const [CurrentPoster, setCurrentPoster] = useState<any>()

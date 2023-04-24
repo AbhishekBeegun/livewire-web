@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import logo from "../../../public/logo-r.png"
 import Image from 'next/image'
 import {IoMdClose} from "react-icons/io"
-import {MdImagesearchRoller,MdImage,MdTitle,MdZoomOutMap,
+import {MdImagesearchRoller,MdImage,MdTitle,
 MdLocationOn,MdDateRange,MdQuestionMark} from "react-icons/md"
 import TitleControl from './components/TitleControl'
 import BackgroundImg from './components/BackgroundImg'

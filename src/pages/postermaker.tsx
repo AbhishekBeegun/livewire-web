@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState } from 'react'
 import Sidebar from '~/components/PosterMaker/Sidebar'
 import OpenSidebar from '~/components/PosterMaker/OpenSidebar'
 import Templateone from '~/components/PosterMaker/Template/Templateone'
-import Templatetwo from '~/components/PosterMaker/Template/Templatetwo'
+// import Templatetwo from '~/components/PosterMaker/Template/Templatetwo'
 import PosterExample from '~/components/PosterMaker/PosterExample'
 
 
@@ -43,7 +43,7 @@ const Postermaker = () => {
 
 
   return (
-    <div className='flex flex-col lg:flex-row py-16 justify-around items-center'>
+    <div className='flex flex-col lg:flex-row py-16 justify-center gap-20 items-center'>
         <OpenSidebar setShowSidebar={setShowSidebar} />
 
         {ShowSidebar ? 

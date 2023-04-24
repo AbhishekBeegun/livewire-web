@@ -18,10 +18,6 @@ const FirstScreen = () => {
           <h1 className="text-3xl lg:text-4xl font-bold">Download <span className='text-[#fd9c18]'>LiveWire</span> to start booking artists.</h1>
           <p className=" text-xs lg:text-xl font-semibold text-gray-300">LiveWire is the easiest way to book tickets for live music and artist for private parties, colleges, bars, weddings & more.</p>
           <div className="flex flex-col gap-2">
-            <button className="px-4 py-2 flex justify-center items-center gap-2 bg-white rounded-full font-semibold hover:scale-105 transition-all text-black">
-               <IoLogoAndroid size={20}/> 
-              <p>Download Android App</p>
-            </button>
 
             
             <Link href={"/explore"}>
@@ -29,6 +25,10 @@ const FirstScreen = () => {
                 Continue to LiveWire - Web version
             </button>
             </Link>
+            <button className="px-4 py-2 flex justify-center items-center gap-2 bg-white rounded-full font-semibold hover:scale-105 transition-all text-black">
+               <IoLogoAndroid size={20}/> 
+              <p>Download Android App</p>
+            </button>
           </div>
         </div>      
       </main>    

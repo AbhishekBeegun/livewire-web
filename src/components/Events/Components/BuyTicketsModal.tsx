@@ -73,7 +73,9 @@ const BuyTicketsModal = ({setShowModal,title ,nmrl,vip,vvip} : any) => {
             <div className="flex flex-row flex-wrap gap-2 justify-evenly px-4">
             {prices.map( (item: any) => (
             
-            <button onClick={() => selectedPrice(item)} 
+            <button 
+            key={item}
+            onClick={() => selectedPrice(item)} 
             className="bg-white py-2 px-4 rounded-full items-center active:bg-yellow-200 hover:scale-110 transition-all">
             <p className="text-black font-semibold">Rs {item}</p>
             </button>
@@ -114,7 +116,7 @@ const BuyTicketsModal = ({setShowModal,title ,nmrl,vip,vvip} : any) => {
             className="text-white text-xs font-semibold">TOTAL : Rs {total}</p>
             <Link href={"/userticket"} 
              className='bg-[#FE9D1A] rounded-full p-1 hover:scale-110 transition-all' 
-            onClick={() => {}}>
+           >
             <AiOutlineArrowRight size={25} color="black" />
             </Link>
             </div>

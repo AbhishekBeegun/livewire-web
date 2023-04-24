@@ -1,9 +1,9 @@
 import React from 'react'
 import Picture from './Picture'
 import Video from './Video'
-import Music from './Music'
+// import Music from './Music'
 
-const PVM = ({photos,video,deezer} : any) => {
+const PVM = ({photos,video} : any) => {
   return (
     <>
     <Picture grid={photos}/>

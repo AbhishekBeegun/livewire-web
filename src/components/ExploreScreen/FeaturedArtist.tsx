@@ -30,11 +30,11 @@ const FeaturedArtist = ({FA} :any) => {
     >
 {FA && FA.length > 0 && FA.map( (artist: any) => {
   return(
+     <div key={artist?.slug}>
     <SwiperSlide>
-     
      <ArtistCard artist={artist}/>
-   
     </SwiperSlide>
+     </div>
   )}
 )}
     </Swiper>

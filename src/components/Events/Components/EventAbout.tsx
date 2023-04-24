@@ -7,7 +7,7 @@ import BuyTicketsModal from './BuyTicketsModal'
 
 const EventAbout = ({desc,title,nmrl,vip,vvip} : any) => {
 
-  const [ShowMore, setShowMore] = useState<Boolean>(true)
+  const [ShowMore, setShowMore] = useState<boolean>(true)
 
   const [ShowModal, setShowModal] = useState(false)
 
