@@ -24,9 +24,9 @@ useEffect(() => {
 
 const qrval =`Event:${Name},Ticket:${Price},Qty:${Qty},Status:Paid`
   return (
-    <div className='h-screen pt-12 bg-gradient-to-b from-[#FE9D1A]'>
+    <div className='h-screen pt-12 bg-gradient-to-b from-black'>
 
-    <div className='px-8 flex flex-col uppercase items-center h-1/2 justify-evenly text-white text-center'>
+    <div className='px-8 flex flex-col uppercase items-center h-1/2 justify-evenly text-white text-center text-sm'>
         <h1>{Name}</h1>
         <h3>RS {Price} PER TICKET</h3>
         <h4>Quantity : {Qty}</h4>

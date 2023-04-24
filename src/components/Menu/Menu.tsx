@@ -44,7 +44,8 @@ const Menu = () => {
         <p className='absolute top-0 right-0 p-1 text-xs bg-red-500  rounded-lg animate-ping'>New</p>
       </Link>
 
-      <Link href={"/mobilefeature"}
+      <Link href={"/Mobilefeature"}
+      onClick={() => handleClick()}
       className='py-4 flex justify-around items-center bg-red-500 rounded-lg'>
         <HiOutlineUserCircle size={40} />
         <p>User Tickets</p>

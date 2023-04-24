@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image'
-import {IoLogoAndroid} from 'react-icons/io'
+import {IoLogoAndroid} from 'react-icons/io5'
 import mckup from "../../../public/image1.webp"
 
 
@@ -21,13 +21,15 @@ const FirstScreen = () => {
 
             
             <Link href={"/explore"}>
-            <button className="px-4 py-2 font-semibold hover:scale-105 transition-all">
+            <button className="px-4 py-2 font-semibold hover:scale-105 transition-all text-xl">
                 Continue to LiveWire - Web version
             </button>
+
+            <p>OR</p>
             </Link>
             <button className="px-4 py-2 flex justify-center items-center gap-2 bg-white rounded-full font-semibold hover:scale-105 transition-all text-black">
                <IoLogoAndroid size={20}/> 
-              <p>Download Android App</p>
+              <p>Download LiveWire Apk</p>
             </button>
           </div>
         </div>      
