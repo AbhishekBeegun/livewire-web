@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ArtistCard from '~/components/Artists/ArtistCard'
+import HeadDetails from '~/components/BasicLayout/HeadDetails'
 import {getApolloClient} from '~/lib/apollo-client'
 import { ALLARTIST_QUERY } from '~/lib/Queries'
 
@@ -10,6 +11,7 @@ const AllArtists = ({ALL}:any) => {
 
   return (
     <div className='flex flex-row bg-black gap-4 items-center justify-center flex-wrap py-16 px-2 lg:px-20'>
+  <HeadDetails title={"All Artists"}/>
   {ALLARTISTS && ALLARTISTS.length > 0 && ALLARTISTS.map( (artist: any) => {
   return(
       

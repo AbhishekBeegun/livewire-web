@@ -3,10 +3,12 @@ import Header from './Components/Header'
 import Reviews from './Components/Reviews'
 import About from './Components/About'
 import PVM from './Components/PVM'
+import HeadDetails from '../BasicLayout/HeadDetails'
 
 const ArtistDetails = ({ARD} :any) => {
   return (
     <>
+    <HeadDetails title={ARD.name} />
     <Header
     name={ARD.name}
     rating={ARD.rating}

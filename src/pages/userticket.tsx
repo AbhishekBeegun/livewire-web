@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import QRCode from "react-qr-code";
+import HeadDetails from '~/components/BasicLayout/HeadDetails';
 const userticket = () => {
 
     const [Name, setName] = useState()
@@ -25,7 +26,7 @@ useEffect(() => {
 const qrval =`Event:${Name},Ticket:${Price},Qty:${Qty},Status:Paid`
   return (
     <div className='h-screen pt-12 bg-gradient-to-b from-black'>
-
+    <HeadDetails title={"User Tickets"} />
     <div className='px-8 flex flex-col uppercase items-center h-1/2 justify-evenly text-white text-center text-sm'>
         <h1>{Name}</h1>
         <h3>RS {Price} PER TICKET</h3>

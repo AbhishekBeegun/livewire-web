@@ -4,6 +4,7 @@ import OpenSidebar from '~/components/PosterMaker/OpenSidebar'
 import Templateone from '~/components/PosterMaker/Template/Templateone'
 // import Templatetwo from '~/components/PosterMaker/Template/Templatetwo'
 import PosterExample from '~/components/PosterMaker/PosterExample'
+import HeadDetails from '~/components/BasicLayout/HeadDetails'
 
 
 const Postermaker = () => {
@@ -44,6 +45,7 @@ const Postermaker = () => {
 
   return (
     <div className='flex flex-col lg:flex-row py-16 justify-center gap-20 items-center'>
+      <HeadDetails title={"Poster Maker"}/>
         <OpenSidebar setShowSidebar={setShowSidebar} />
 
         {ShowSidebar ? 

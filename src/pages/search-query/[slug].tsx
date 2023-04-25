@@ -1,5 +1,6 @@
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
 import React from 'react'
+import HeadDetails from '~/components/BasicLayout/HeadDetails'
 import SearchResult from '~/components/Search/SearchResult'
 import { SEARCHARTIST_QUERY } from '~/lib/Queries'
 import { getApolloClient } from '~/lib/apollo-client'
@@ -8,6 +9,7 @@ const Slug = ({SR} : any) => {
    
   return (
     <>
+    <HeadDetails title={"Search Result"}/>
     <SearchResult artist={SR} />
     </>
   )

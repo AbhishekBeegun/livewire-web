@@ -9,6 +9,7 @@ import { ARTIST_QUERY } from '~/lib/Queries'
 import { EVENT_QUERY } from '~/lib/Queries'
 import Image from 'next/image'
 import logo from '../../public/logo-r.png'
+import HeadDetails from '~/components/BasicLayout/HeadDetails'
 
 
 const explore = ({LA,FA,UPE} : any) => {
@@ -31,6 +32,8 @@ const explore = ({LA,FA,UPE} : any) => {
  
   return (
     <>
+
+    <HeadDetails title={"Explore"}/>
     {!FakeLoading ? 
 
     <>

@@ -5,10 +5,12 @@ import EventLocation from './Components/EventLocation'
 import EventTickets from './Components/EventTickets'
 import EventArtists from './Components/EventArtists'
 import EventMusicVideo from './Components/EventMusicVideo'
+import HeadDetails from '../BasicLayout/HeadDetails'
 
 const EventDetails = ({EVD} : any) => {
   return (
     <>
+    <HeadDetails title={EVD.title}/>
     <EventHeader
     cover={EVD.poster}
     title={EVD.title}

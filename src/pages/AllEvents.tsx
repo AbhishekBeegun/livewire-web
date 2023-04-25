@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import HeadDetails from '~/components/BasicLayout/HeadDetails'
 import EventCard from '~/components/Events/EventCard'
 import { ALLEVENT_QUERY } from '~/lib/Queries'
 import {getApolloClient} from '~/lib/apollo-client'
@@ -11,7 +12,7 @@ const AllEvents = ({ALLEV} : any) => {
   return (
     
     <div className='flex flex-row bg-black gap-4 items-center justify-center w-screen h-screen flex-wrap py-16 px-4 lg:px-20'>
-
+     <HeadDetails title={"All Events"}/>
 {ALLEVENTS && ALLEVENTS.length > 0 && ALLEVENTS.map( (event: any) => {
   return(
       <div 
