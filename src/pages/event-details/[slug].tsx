@@ -6,7 +6,6 @@ import { getApolloClient } from '~/lib/apollo-client'
 
 const Slug = ({EVD} : any) => {
 
-  console.log(EVD)
   return (
     <>
         <EventDetails EVD={EVD}/>

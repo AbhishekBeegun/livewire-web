@@ -21,11 +21,10 @@ const FirstScreen = () => {
 
             
             <Link href={"/explore"}>
-            <button className="px-4 py-2 font-semibold hover:scale-105 transition-all text-xl">
+            <button className="px-4 py-4 font-semibold hover:scale-105 transition-all text-xl">
                 Continue to LiveWire - Web version
             </button>
 
-            <p>OR</p>
             </Link>
             <button className="px-4 py-2 flex justify-center items-center gap-2 bg-white rounded-full font-semibold hover:scale-105 transition-all text-black">
                <IoLogoAndroid size={20}/> 
