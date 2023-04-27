@@ -17,7 +17,7 @@ const Menu = () => {
     <>
     {!Show ? 
     <button onClick={() => handleClick()}>
-        <div className='absolute top-4 h-4 w-4 rounded-full bg-red-600 animate-ping'></div>
+        {/* <div className='absolute top-4 h-4 w-4 rounded-full bg-red-600 animate-ping'></div> */}
         <IoMenu size={20}/>
     </button>
      : 

@@ -11,7 +11,7 @@ const AllEvents = ({ALLEV} : any) => {
 
   return (
     
-    <div className='flex flex-row bg-black gap-4 items-center justify-center w-screen h-screen flex-wrap py-16 px-4 lg:px-20'>
+    <div className='flex flex-row bg-black gap-4 items-center justify-center w-screen flex-wrap py-16 px-4 lg:px-20'>
      <HeadDetails title={"All Events"}/>
 {ALLEVENTS && ALLEVENTS.length > 0 && ALLEVENTS.map( (event: any) => {
   return(
