@@ -47,7 +47,7 @@ const PosterExample = () => {
 
       </Swiper>
 
-      <p>Poster Examples</p>
+      <p>Work in Progress</p>
     </div>
   )
 }
