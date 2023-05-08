@@ -37,7 +37,7 @@ const PosterExample = () => {
         </div>
       </SwiperSlide>
       <SwiperSlide>
-      <div className=' h-[550px] w-[400px]'>
+      <div className='h-[550px] w-[400px]'>
            <img 
             className='object-contain w-full h-full'
             src="https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/O783JCkSMyYgBXVRojXg"
@@ -46,6 +46,8 @@ const PosterExample = () => {
       </SwiperSlide>
 
       </Swiper>
+
+      <p>Poster examples with diffrent fonts</p>
 
       <p>Work in Progress</p>
     </div>

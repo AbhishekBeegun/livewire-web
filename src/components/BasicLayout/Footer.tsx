@@ -55,7 +55,7 @@ const Footer = () => {
             </span>
             </div>
     
-            <p className="font-semibold text-xs py-2 px-4">2023 Abhishek Beegun.ALL rights reversed.</p>
+            <p className="font-semibold text-xs py-2 text-center">2023 Abhishek Beegun.ALL rights reversed.</p>
             
             
             </div>
