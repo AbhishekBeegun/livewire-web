@@ -47,11 +47,11 @@ const About = ({desc,name} : any) => {
           
           {ShowMore ? 
           <div className="w-full h-[8vh] overflow-hidden">
-            <p className="text-gray-500 text-xs">{desc}</p>
+            <p className="text-gray-500 text-xs lg:text-sm">{desc}</p>
           </div> :
            <div className="w-full h-auto overflow-hidden">
              <p 
-             className="text-gray-500 text-xs">{desc}</p>
+             className="text-gray-500 text-xs lg:text-sm">{desc}</p>
            </div>}
 
 

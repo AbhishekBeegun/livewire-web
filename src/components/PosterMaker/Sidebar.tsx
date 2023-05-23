@@ -87,27 +87,27 @@ const Sidebar = (
         <button
         title='TITLE'
         onClick={ClickTitle} 
-        className='p-2 rounded-lg focus:bg-orange-400 bg-white'><MdTitle/></button>
+        className='p-2 rounded-lg focus:bg-orange-400 bg-white flex items-center'><MdTitle/><span className='text-sm'>Title</span></button>
 
         <button 
         title='BACKGROUND IMAGE'
         onClick={ClickBckImg}
-        className='p-2 rounded-lg focus:bg-orange-400 bg-white'><MdImagesearchRoller/></button>
+        className='p-2 rounded-lg focus:bg-orange-400 bg-white flex items-center'><MdImagesearchRoller/><span className='text-sm'>Background</span></button>
 
         <button 
         title='POSTER IMAGE'
         onClick={ClickImgPoster}
-        className='p-2 rounded-lg focus:bg-orange-400 bg-white'><MdImage/></button>
+        className='p-2 rounded-lg focus:bg-orange-400 bg-white flex items-center'><MdImage/> <span className='text-sm'>Poster Image</span></button>
 
         <button 
         title='EVENT LOCATION'
         onClick={ClickElocation}
-        className='p-2 rounded-lg focus:bg-orange-400 bg-white'><MdLocationOn/></button>
+        className='p-2 rounded-lg focus:bg-orange-400 bg-white flex items-center'><MdLocationOn/> <span className='text-sm'>Location Title</span></button>
 
         <button 
         title='EVENT DATE'
         onClick={ClickEdate}
-        className='p-2 rounded-lg focus:bg-orange-400 bg-white'><MdDateRange/></button>
+        className='p-2 rounded-lg focus:bg-orange-400 bg-white flex items-center'><MdDateRange/> <span className='text-sm'>Date Title</span></button>
 
         <button 
         title='ISSUES TO FIX'

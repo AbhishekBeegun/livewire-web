@@ -59,11 +59,11 @@ const EventAbout = ({desc,title,nmrl,vip,vvip} : any) => {
           className="text-lg font-semibold text-white py-2">About</p>
           {ShowMore ? 
           <div className="w-full h-[10vh] overflow-hidden">
-            <p className="text-gray-500 text-xs">{desc}</p>
+            <p className="text-gray-500 text-xs lg:text-sm">{desc}</p>
           </div> :
            <div className="w-full h-auto overflow-hidden">
              <p 
-             className="text-gray-500 text-xs">{desc}</p>
+             className="text-gray-500 text-xs lg:text-sm">{desc}</p>
            </div>}
 
 

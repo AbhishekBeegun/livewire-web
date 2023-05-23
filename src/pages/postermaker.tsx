@@ -13,7 +13,7 @@ const Postermaker = () => {
 
 
 
-    const [ShowSidebar, setShowSidebar] = useState(false);
+    const [ShowSidebar, setShowSidebar] = useState(true);
     
     const [BkImg, setBkImg] = useState<any>(
 "https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-2826.jpg"
@@ -25,7 +25,7 @@ const Postermaker = () => {
     const [ImgPoster, setImgPoster] = useState<any>(
 "https://media.graphassets.com/output=format:png/resize=height:800,fit:max/bAfm79jQRvClvH9Un2sb"
       )
-    const [ImgScale, setImgScale] = useState(1.6)
+    const [ImgScale, setImgScale] = useState(1.3)
 
     const [Elocation, setElocation] = useState<any>("Cote D'Or, St Pierre")
     const [ElocationSize, setElocationSize] = useState(40)
@@ -44,7 +44,7 @@ const Postermaker = () => {
 
 
   return (
-    <div className='flex flex-col lg:flex-row py-16 justify-center gap-20 items-center'>
+    <div className='flex flex-col lg:flex-row py-16 justify-around px-20 items-center'>
       <HeadDetails title={"Poster Maker"}/>
         <OpenSidebar setShowSidebar={setShowSidebar} />
 
