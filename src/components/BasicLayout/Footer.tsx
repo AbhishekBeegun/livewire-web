@@ -57,7 +57,7 @@ const Footer = () => {
             </span>
 
 
-            <button className="px-4 py-2 flex justify-center items-center gap-2 bg-white rounded-full font-semibold hover:scale-105 transition-all text-black">
+            <button className="px-2 py-1 lg:px-4 lg:py-2 flex justify-center items-center gap-2 bg-white rounded-full font-semibold hover:scale-105 transition-all text-xs lg:text-base text-black">
                <IoLogoAndroid size={20}/> 
               <Link target='_blank' href={"https://drive.google.com/uc?export=download&id=1zKVjFDRMgqftN3eYA0HEGF12dLEc9Bsn"}
 

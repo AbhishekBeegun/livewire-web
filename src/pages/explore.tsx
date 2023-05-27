@@ -10,7 +10,7 @@ import { EVENT_QUERY } from '~/lib/Queries'
 import Image from 'next/image'
 import logo from '../../public/logo-r.png'
 import HeadDetails from '~/components/BasicLayout/HeadDetails'
-
+import LoadingScreen from '~/components/BasicLayout/LoadingScreen'
 
 const explore = ({LA,FA,UPE} : any) => {
 
@@ -43,10 +43,7 @@ const explore = ({LA,FA,UPE} : any) => {
     <UpcomeEvents UPE={UpcomEvents}/>
     </>
     :
-    <div className='h-[80vh] w-screen flex justify-center items-center bg-black transition-all'>
-    <Image className='h-32 w-32 animate-pulse' src={logo} alt="LiveWire"/>
-
-    </div>
+    <LoadingScreen/>
     } 
     </>
   )

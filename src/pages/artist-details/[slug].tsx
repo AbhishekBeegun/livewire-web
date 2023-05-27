@@ -1,6 +1,7 @@
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher'
 import React from 'react'
 import ArtistDetails from '~/components/Artists/ArtistDetails'
+import LoadingScreen from '~/components/BasicLayout/LoadingScreen'
 import {getApolloClient} from '~/lib/apollo-client'
 import { ARTIST_DETAILS } from '~/lib/Queries'
 
@@ -9,7 +10,9 @@ const Slug = ({ARD} : any ) => {
 
   return (
     <>
+    {ARD ?
         <ArtistDetails ARD={ARD}/>
+    : <LoadingScreen />}
     </>
   )
 }
